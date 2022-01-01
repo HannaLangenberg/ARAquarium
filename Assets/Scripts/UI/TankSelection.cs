@@ -44,6 +44,9 @@ namespace UI
         {
             _items = inventoryToDisplay.container;
             _slots = new GameObject[slotHolder.transform.childCount];
+            slotHolder.GetComponent<RectTransform>().anchoredPosition = new Vector2(
+                    slotHolder.GetComponent<RectTransform>().sizeDelta.x,
+                    0);
             for (int i = 0; i < slotHolder.transform.childCount; i++)
             {
                 _slots[i] = slotHolder.transform.GetChild(i).gameObject;

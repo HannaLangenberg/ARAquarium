@@ -44,6 +44,10 @@ namespace UI
         {
             _items = inventoryToDisplay.container;
             _slots = new GameObject[slotHolder.transform.childCount];
+            slotHolder.GetComponentInParent<ScrollRect>().velocity = Vector2.zero;
+            slotHolder.GetComponent<RectTransform>().anchoredPosition = new Vector2(
+                    slotHolder.GetComponent<RectTransform>().sizeDelta.x,
+                    0);
             
             for (int i = 0; i < slotHolder.transform.childCount; i++)
             {
@@ -123,7 +127,6 @@ namespace UI
             detailsPanelToShow.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<RectTransform>().anchoredPosition =
             - new Vector2(0,
                 detailsPanelToShow.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<RectTransform>().sizeDelta.y);
-
             
             selectionPanelToHide.SetActive(false);
         }
