@@ -88,11 +88,9 @@ namespace UI
                         GetComponent<Player>().fishInventory.container); 
                     if (index >= 0)
                     {
-                        // slotHolder.transform.GetChild(index).gameobject.SetActive(false);
                         slotHolder.transform.GetChild(index).GetComponent<Image>().color = Color.gray;
                         GetComponent<Player>().fishInventory.container[index].isActive = false;
                     }
-                    
                 }
             }
         }
@@ -203,10 +201,10 @@ namespace UI
 
         private void EnableAllSlots()
         {
-            for (int i = 0; i < slotHolder.transform.childCount; i++)
+            for (int i = 0; i < inventoryToDisplay.container.Count; i++)
             {
                 slotHolder.transform.GetChild(i).GetComponent<Image>().color = Color.white;
-                GetComponent<Player>().fishInventory.container[i].isActive = true;
+                inventoryToDisplay.container[i].isActive = true;
             }
         }
     }
