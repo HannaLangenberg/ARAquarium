@@ -1,36 +1,75 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using Scriptable_Objects.Inventory.Scripts;
 using Scriptable_Objects.Items.Scripts;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 namespace Display
 {
+    /// <summary>
+    /// Class <c>PlaceInScene</c> places all instances of selected prefabs in the scene.
+    /// </summary>
     public class PlaceInScene : MonoBehaviour
     {
+        /// <summary>
+        /// GameObject <c>Player</c> for easier access to the scripts attached to player.
+        /// </summary>
         public GameObject player;
+        /// <summary>
+        /// GameObject <c>placeholderTankEmpty</c> is the empty to which the selected aquarium will be
+        /// parented. It itself is parented to the ARCamera.
+        /// </summary>
         public GameObject placeholderTankEmpty;
+        /// <summary>
+        /// GameObject <c>fail</c>. The Textfield in wich the error message "... could not be added" will be displayed.
+        /// </summary>
         public GameObject fail;
-
+        /// <summary>
+        /// TankObject <c>activeTankObject</c>. A ScriptableObject TankObject which stores information about the selected aquarium. 
+        /// </summary>
         public TankObject activeTankObject;
+        
+        /// <summary>
+        /// GameObject <c>_...Instance</c>. Temporarily stores the current instance for further manipulation.
+        /// </summary>
         private GameObject _tankInstance, _fishInstance, _plantInstance, _decorInstance;
-        // private Vector3 _fishVector3;
-        private Dictionary<string, Vector3> _map;
+        /// <summary>
+        /// Dictionary <c>_swarmCenterPoints</c>. Stores the centerSpawnPoints for each fish species with the fish tag as the key.
+        /// </summary>
+        private Dictionary<string, Vector3> _swarmCenterPoints;
+        /// <summary>
+        /// List <c>_...InScene</c>. Stores all instances of the specific type for add and remove operations. 
+        /// </summary>
         private List<GameObject> _fishInScene, _plantsInScene, _decorInScene;
+        /// <summary>
+        /// Quaternion <c>_rotation</c>. The rotation of the fish, plant, decor instances.
+        /// </summary>
         private Quaternion _rotation;
+        /// <summary>
+        /// Vector3 <c>_centerPoint</c>. Calculated centerPoint of the instance that should be spawned.
+        /// </summary>
         private Vector3 _centerPoint;
-        private float _maxSpawnRadius;
+        /// <summary>
+        /// Float <c>_innerCircle</c>. The actual radius in which fish can be spawned around the _centerPoint without it
+        /// sticking into the aquarium's walls.
+        /// </summary>
         private float _innerCircle;
+        /// <summary>
+        /// Float <c>_maxSpawnRadius</c>. A safety additional radius around the _innerCircle to make sure the
+        /// _centerPoint is far enough from the walls.
+        /// </summary>
+        private float _maxSpawnRadius;
+        /// <summary>
+        /// For more information see function: InsideTank
+        /// </summary>
 
-        private float radius1, radius11, radius2, radius22;
-
+        /// <summary>
+        /// Initializes the dictionary, lists and the aquarium, plants, decor items and fish.
+        /// </summary>
         void Start()
         {
-            _map = new Dictionary<string, Vector3>();
+            _swarmCenterPoints = new Dictionary<string, Vector3>();
             _fishInScene = new List<GameObject>();
             _plantsInScene = new List<GameObject>();
             _decorInScene = new List<GameObject>();
@@ -41,63 +80,90 @@ namespace Display
         }
 
         //__AT START → Initialize functions_____________________________________________________________________________
+        /// <summary>
+        /// Initializes the selected aquarium. Only one aquarium at a time can have an amount of 1,
+        /// all the others have an amount of 0. This is used to retrieve the correct selected aquarium.
+        /// It is instantiated with respect to the UI elements in the center of the visible area.
+        /// Afterwards the corresponding TankObject is saved as the activeTankObject so that its stats are available.
+        /// </summary>
         private void InitializeSelectedTank()
         {
             foreach (InventorySlot inventorySlot in player.GetComponent<Player>().tankInventory.container)
             {
-                if (inventorySlot.amount == 1)
-                {
-                    Vector3 position = new Vector3(
-                        -0.2f,
-                        inventorySlot.item.prefab.gameObject.GetComponent<MeshFilter>().sharedMesh.bounds.size.y/2,
-                        0);
-                    if(inventorySlot.item.prefab.name.Equals("R_240L_120cm_Prefab"))
-                    {
-                        position += new Vector3(0, 0, -1f);
-                    }
-                    else if (inventorySlot.item.prefab.name.Equals("R_640L_180cm_Prefab"))
-                    {
-                        position += new Vector3(0, 0.05f, -2.2f);
-                    }
-                     
-                    
-                    _tankInstance = Instantiate(inventorySlot.item.prefab,
-                        placeholderTankEmpty.transform.position
-                        - position,
-                        Quaternion.identity,
-                        placeholderTankEmpty.transform);
-                    activeTankObject = inventorySlot.item as TankObject;
-                }
+                if (inventorySlot.amount != 1) continue;
+                
+                _tankInstance = Instantiate(
+                    inventorySlot.item.prefab,
+                    placeholderTankEmpty.transform.position - CalculatePositionInFrame(inventorySlot),
+                    Quaternion.identity,
+                    placeholderTankEmpty.transform);
+                activeTankObject = inventorySlot.item as TankObject;
             }
         }
+        
+        /// <summary>
+        /// This function calculates the position with respect to the UI elements.
+        /// For the two largest aquariums an additional correction has to be done.
+        /// </summary>
+        private Vector3 CalculatePositionInFrame(InventorySlot inventorySlot)
+        {
+            Vector3 position = new Vector3(
+                -0.2f,
+                inventorySlot.item.prefab.gameObject.GetComponent<MeshFilter>().sharedMesh.bounds.size.y/2,
+                0);
+            switch (inventorySlot.item.prefab.name)
+            {
+                case "R_240L_120cm_Prefab":
+                    position += new Vector3(0, 0, -1f);
+                    break;
+                case "R_640L_180cm_Prefab":
+                    position += new Vector3(0, 0.05f, -2.2f);
+                    break;
+            }
+
+            return position;
+        }
+
+        /// <summary>
+        /// This function initializes all fish.
+        /// The fish is only initialized if its amount is greater than zero and is not disabled by the size of th
+        /// aquarium (each has a list with disabledFish according to the available space).
+        /// Fish of the same species spawn in a swarm. In the function InsideTank the spawn center is calculated.
+        /// (For more information see this function)
+        /// The spawnCenter is stored in a dictionary with the fish's tag as the key.
+        /// There is a counter "fails". It is counted up if the fish could not be placed due to missing space.
+        /// Fails is used to correct the fish's amount to show accurately how many are placed in the aquarium.
+        /// </summary>
         private void InitializeAllFish() 
-        { // return from insideTank is center, radius is activeTankObject.maxSpawnRadius
-            // _fishVector3 = InsideTank();
+        {
             foreach (InventorySlot inventorySlot in player.GetComponent<Player>().fishInventory.container)
             {
-                if (inventorySlot.amount > 0 && FishOkToAdd(inventorySlot))
+                if (inventorySlot.amount <= 0 || !FishOkToAdd(inventorySlot)) continue;
+                
+                _swarmCenterPoints.Add(inventorySlot.item.tag, InsideTank(inventorySlot));
+                var fails = 0;
+                for (var i = 0; i < inventorySlot.amount; i++)
                 {
-                    _map.Add(inventorySlot.item.tag, InsideTank(inventorySlot));
-                    int fails = 0;
-                    for (int i = 0; i < inventorySlot.amount; i++)
+                    if (!PositionFish(inventorySlot))
                     {
-                        if (!PositionFish(inventorySlot))
-                        {
-                            fails++;
-                        }
+                        fails++;
                     }
-                    inventorySlot.amount -= fails;
                 }
+                inventorySlot.amount -= fails;
             }
         }
+        
+        /// <summary>
+        /// This function initializes all plants.
+        /// </summary>
         private void InitializeAllPlants()
         {
             foreach (InventorySlot inventorySlot in player.GetComponent<Player>().plantInventory.container)
             {
-                int fails = 0;
+                var fails = 0;
                 if (inventorySlot.amount > 0)
                 {
-                    for (int i = 0; i < inventorySlot.amount; i++)
+                    for (var i = 0; i < inventorySlot.amount; i++)
                     {
                         if (!PositionOther(inventorySlot))
                         {
@@ -148,9 +214,8 @@ namespace Display
 
         private void CheckIfDictionaryContainsFish(InventorySlot inventorySlot)
         {
-            if(!_map.ContainsKey(inventorySlot.item.tag))
-                _map.Add(inventorySlot.item.tag, InsideTank(inventorySlot));
-
+            if(!_swarmCenterPoints.ContainsKey(inventorySlot.item.tag))
+                _swarmCenterPoints.Add(inventorySlot.item.tag, InsideTank(inventorySlot));
         }
 
         public void RemoveExistingOther(InventorySlot inventorySlot)
@@ -203,7 +268,7 @@ namespace Display
                 Destroy(fishGO);
             }
 
-            _map.Clear();
+            _swarmCenterPoints.Clear();
             _fishInScene.Clear();
             _plantsInScene.Clear();
             InitializeSelectedTank();
@@ -233,17 +298,6 @@ namespace Display
                 _maxSpawnRadius = activeTankObject.maxSpawnRadius;
                 _innerCircle    = _maxSpawnRadius - greatestExtend * 2;
             }
-                    //FOR DEBUGGING
-                    if (inventorySlot.item.tag.Equals("Green Neon Tetra"))
-                    {
-                        radius1 = _maxSpawnRadius;
-                        radius11 = _innerCircle;
-                    }
-                    else
-                    {
-                        radius2 = _maxSpawnRadius;
-                        radius22 = _innerCircle;
-                    }
             
             return tankBounds.center +
                    new Vector3(
@@ -360,7 +414,7 @@ namespace Display
             {
                 RecalculateSpawnRadii(inventorySlot);
             }
-            Vector3 position = _map[inventorySlot.item.tag] + 
+            Vector3 position = _swarmCenterPoints[inventorySlot.item.tag] + 
                                Random.insideUnitSphere * _innerCircle;
             _centerPoint = position;
         }
@@ -375,16 +429,6 @@ namespace Display
                 _maxSpawnRadius = activeTankObject.maxSpawnRadius;
                 _innerCircle    = _maxSpawnRadius - greatestExtend * 2;
             }
-                if (inventorySlot.item.tag.Equals("Green Neon Tetra"))
-                {
-                    radius1 = _maxSpawnRadius;
-                    radius11 = _innerCircle;
-                }
-                else
-                {
-                    radius2 = _maxSpawnRadius;
-                    radius22 = _innerCircle;
-                }
         }
         private void CalcPosAndRotAndScl(InventorySlot inventorySlot)
         {
@@ -431,7 +475,6 @@ namespace Display
                 case 1: //other
                     _rotation = Quaternion.AngleAxis(Random.Range(-180, 180), Vector3.up);
                     break;
-                
             }
             inventorySlot.item.prefab.transform.rotation = _rotation;
         }
@@ -458,18 +501,5 @@ namespace Display
             inventorySlot.item.prefab.transform.localScale =
             new Vector3(1,1,1);
         }
-        
-        //__DEBUG_______________________________________________________________________________________________________
-        /*private void OnDrawGizmos()
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(_map[_fishInScene[0].tag], radius1);
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(_map[_fishInScene[0].tag], radius11);
-            Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(_map[_fishInScene[_fishInScene.Count-1].tag], radius2);
-            Gizmos.color = Color.blue;
-            Gizmos.DrawWireSphere(_map[_fishInScene[_fishInScene.Count-1].tag], radius22);
-        }*/
     }
 }
