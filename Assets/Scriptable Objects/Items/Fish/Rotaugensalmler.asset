@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f0f7e9bd5db544eb8334664e392f84, type: 3}
+  m_Name: Rotaugensalmler
+  m_EditorClassIdentifier: 
+  tag: Rotaugensalmler
+  name: Rotaugensalmler
+  thumbnail: {fileID: 21300000, guid: 2b697b047b2fb3944acb641ce6130dba, type: 3}
+  prefab: {fileID: 3000830073907468925, guid: aba2779f6b801b24b8dff5830209e8d5, type: 3}
+  type: 1
+  furtherInformation: Under Construction.
+  disabledFish: []
+  biologicalName: Hemigrammus bellottii
+  species: Bellotti-Rotaugensalmler
+  length: 3 cm

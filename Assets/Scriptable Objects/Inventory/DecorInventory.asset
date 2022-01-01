@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e3dc5b5bff1c2c418fc33e79be49cc9, type: 3}
+  m_Name: DecorInventory
+  m_EditorClassIdentifier: 
+  container:
+  - item: {fileID: 11400000, guid: e1e376261a10f21459bc76fb75d6f2e8, type: 2}
+    amount: 0
+    isActive: 0
+  - item: {fileID: 11400000, guid: 3b1f2694ed109314abb78274bf15a775, type: 2}
+    amount: 0
+    isActive: 0
+  - item: {fileID: 11400000, guid: 7480f39c7a1fbcd4c99515d6f5052c64, type: 2}
+    amount: 0
+    isActive: 0
+  - item: {fileID: 11400000, guid: e5e57e2b097e8ee4e8f7f53ad1c9c5f4, type: 2}
+    amount: 0
+    isActive: 0

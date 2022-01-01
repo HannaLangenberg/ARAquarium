@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f0f7e9bd5db544eb8334664e392f84, type: 3}
+  m_Name: Zitronensalmler
+  m_EditorClassIdentifier: 
+  tag: Zitronensalmler
+  name: Zitronensalmler
+  thumbnail: {fileID: 21300000, guid: 604d52dca5e2ce348ae5093e98dc0ce7, type: 3}
+  prefab: {fileID: 7536343703093785159, guid: e19519a43f8cdff47af693788176a5ad, type: 3}
+  type: 1
+  furtherInformation: "Der quirlige Zitronensalmler wird auch unter dem Namen Sch\xF6nflossensalmler
+    gehandelt. Sein wissenschaftlicher Name lautet Hyphessobrycon pulchripinnis.
+    Der h\xFCbsche Salmler kommt aus Brasilien, wo er in Fl\xFCssen mit weichem,
+    huminstoffhaltigem Wasser lebt. In h\xE4rterem Wasser verblassen seine sch\xF6nen
+    Farben, in leicht saurem Weichwasser leuchtet der Fisch zitronengelb-silbrig.
+    Die Flossen an R\xFCcken und Bauch sind mit auff\xE4lligen schwarzen und zitronengelben
+    Flecken versehen, die Schwanzflosse ist leicht zitronengelb mit schmalen schwarzen
+    Abzeichen. Karotinhaltiges Futter wie Artemia oder Wasserfl\xF6he unterst\xFCtzen
+    die F\xE4rbung. Die Oberseite der Iris ist rot gef\xE4rbt, teilweise ist auch
+    die gesamte Iris rot. Die eher hochr\xFCckigen Aquarienfische sind seitlich zusammengedr\xFCckt,
+    wirken also von vorn sehr schlank. Die M\xE4nnchen sind insgesamt schlanker als
+    die Weibchen. Zitronensalmler werden ungef\xE4hr 4-5 cm lang.\r\nDie friedlichen
+    Zitronensalmler sind lebhafte Aquarienfische und lassen sich gut in gr\xF6\xDFeren
+    Gruppen von Artgenossen halten. Mindestgr\xF6\xDFe des Schwarms sind 10 Fische.
+    In einem Gesellschaftsaquarium mit anderen nicht zu gro\xDFen Fischen aus S\xFCdamerika
+    lassen sie sich perfekt vergesellschaften, aber auch mit Garnelen wie Amanogarnelen
+    oder Neocaridina davidi und Sulawesi Inlandsgarnelen sind sie gut zu halten.
+    Hyphessobrycon pulchripinnis bevorzugt die mittleren und unteren Wasserschichten
+    und sollte daher nicht unbedingt zu Zwergkrebsen gesetzt werden. Garnelen brauchen
+    in einem Gesellschaftsaquarium mit Fischen grunds\xE4tzlich eine gro\xDFe Zahl
+    Versteckpl\xE4tze und dichte Polster aus Aquarienmoos.\r\nZitronensalmler sind
+    recht schwimmfreudig und brauchen daher etwas mehr Platz. Eine gute, dichte Randbepflanzung
+    gibt ihnen Sicherheit. In der Natur leben Sch\xF6nflossensalmler in Bergb\xE4chen
+    mit einer starken Wasserstr\xF6mung. Sauerstoffreiches, gut gefiltertes Wasser
+    und eine gute Str\xF6mung sind auch im Aquarium ein Muss. Weiches, huminstoffreiches
+    Wasser mit einem pH von 5,5 bis 6,8 und Temperaturen von 24-27 \xB0C sind optimal.\r\nZitronensalmler
+    sind Allesfresser und m\xF6gen neben Frostfutter und Lebendfutter gerne auch
+    weiche pflanzliche Kost. Ein Flockenfutter f\xFCr omnivore Aquarienfische ist
+    eine gute Wahl, Frostfutter und Lebendfutter sind jedoch ebenfalls notwendig
+    und k\xF6nnen durch Flockenfutter nicht ersetzt werden.\r\nDie Zucht von Hyphessobrycon
+    pulchripinnis ist eher etwas f\xFCr Fortgeschrittene. Nicht nur brauchen die
+    Salmler dazu im Zuchtaquarium weiches, sehr sauerstoffreiches, leicht anges\xE4uertes
+    Wasser, die Weibchen setzen auch nur recht schwer Laich an. Eine vorherige F\xFCtterung
+    mit qualitativ hochwertigem, reichhaltigem Lebendfutter ist daher ein Muss.\r\nAls
+    Laichr\xE4uber und Freilaicher brauchen Zitronensalmler im Zuchtaquarium zwingend
+    feines Moos als Laichsubstrat. Kommt es zum Ablaichen, sollten die Elternfische
+    danach auf jeden Fall aus dem Becken genommen werden, weil sie die Eier sonst
+    postwendend fressen. Die sehr lichtempfindlichen winzigen Jungfische brauchen
+    anfangs Infusorien und Pantoffeltierchen, sp\xE4ter dann auch Artemianauplien.
+    Das Zuchtaquarium sollte dunkel stehen und nur sp\xE4rlich beleuchtet werden.
+    Torf oder Erlenzapfen beugen einer Laichverpilzung vor.\r"
+  disabledFish: []
+  biologicalName: Hyphessobrycon pulchripinnis
+  species: Zitronensalmler
+  length: 3 cm

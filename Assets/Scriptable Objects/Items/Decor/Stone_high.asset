@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0f11d79531ccd84cb2a77140486070b, type: 3}
+  m_Name: Stone_high
+  m_EditorClassIdentifier: 
+  tag: Stone high
+  name: Stein (hoch)
+  thumbnail: {fileID: 21300000, guid: 77310992fad784a4d8998db3ac669605, type: 3}
+  prefab: {fileID: 5467843122823554031, guid: 1a71af27215dc41439679bffe81f9654, type: 3}
+  type: 3
+  furtherInformation: Ein hoher Stein.
+  disabledFish: []
+  width: 9.5 cm
+  height: 10 cm
+  depth: 15 cm

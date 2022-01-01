@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d969f6317926e4b9eca62dc37a773f, type: 3}
+  m_Name: R_60L_65cm
+  m_EditorClassIdentifier: 
+  tag: Tank
+  name: Jace 60 L
+  thumbnail: {fileID: 21300000, guid: da416636cb3846749b420730e1bc20f7, type: 3}
+  prefab: {fileID: 3422051848951931441, guid: 386934514b3e73040b6f4cd7a909b968, type: 3}
+  type: 0
+  furtherInformation: Hat drei Nachnamen zur Auswahl.
+  disabledFish:
+  - {fileID: 11400000, guid: 61c29aca06a5dcf4089dd1ccde07b64a, type: 2}
+  - {fileID: 11400000, guid: 01df755a53624bd4d8a5c2ffd5247b50, type: 2}
+  width: 65 cm
+  height: 35 cm
+  depth: 35 cm
+  volume: 60 L
+  decorScaleMin: 0.6
+  decorScaleMax: 0.9
+  plantScaleMax: 2.5
+  maxSpawnRadius: 0.25

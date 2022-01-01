@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f0f7e9bd5db544eb8334664e392f84, type: 3}
+  m_Name: L173 Zebra Ancistrus
+  m_EditorClassIdentifier: 
+  tag: L173 Zebra Ancistrus
+  name: L173 Zebra Ancistrus
+  thumbnail: {fileID: 21300000, guid: 4b0620acc0eb9be48a247d3943abdf66, type: 3}
+  prefab: {fileID: 9169211475084451781, guid: fd045483871c1d644a18f27a72937a16, type: 3}
+  type: 1
+  furtherInformation: "Hypancistrus spec. L173 stammt aus dem Rio Xingu in Brasiliens.
+    \r\nDie Hypancistrus spec. L173 sind vor allem bei Par\xE1 zu finden. Die ruhigen
+    und friedlichen Welse mit dem ansprechenden Zebramuster sollten in einem Aquarium
+    ab 100 l gehalten werden, das diverse Steinaufbauten, Wurzeln und viele H\xF6hlen
+    als R\xFCckzugsm\xF6glichkeiten anbietet. Hierbei sollten sowohl offene als auch
+    geschlossene R\xF6hren zum Einsatz kommen. In einem Aquarium ab 100 l kann eine
+    kleine Gruppe mit 5 Tieren dieser wundersch\xF6nen Welse gehalten werden. Es
+    handelt sich beim Zebra-Harnischwels um eine Art, die Pflanzen weniger als Futterersatz
+    als andere Welsarten ansehen und die Wasserpflanzen in der Regel in Ruhe lassen.
+    Adulte Tiere gehen gar nicht mehr an Pflanzen. Idealerweise sollten Schwimmpflanzen
+    eingesetzt werden, die das Licht d\xE4mpfen und den Tieren von oben Schutz bieten.\r\nDer
+    pH-Wert f\xFCr Hypancistrus spec. L173 sollte zwischen 5,5 und 7,5 liegen und
+    der H\xE4rtebereich bei ca. 1 bis 20\xB0 dGH. Die Fische f\xFChlen sich bei einer
+    Wassertemperatur zwischen 27-30\xB0 Celsius besonders wohl. Aufgrund der Vorliebe
+    f\xFCr diese Wasserwerte ist er auch ein idealer Beifisch f\xFCr Discus! Diese
+    Welse lieben sauberes und sauerstoffreiches Wasser, h\xE4ufige Wasserwechsel
+    sollten daher vorgenommen werden.\r\nHypancistrus spec. L173 ist ein Allesfresser,
+    der jegliches Trocken-, Tabletten-, Lebend- und Frostfutter gerne annimmt. Adulte
+    Tiere bevorzugen Fleischkost sogar, Jungtiere nehmen auch pflanzliche Kost an.
+    Der Zebra-Harnischwels erreicht eine K\xF6rperl\xE4nge von bis zu 12 cm. Die
+    Zucht ist bereits in einseitig ge\xF6ffneten Tonr\xF6hren gelungen. Nach der
+    Eiablage betreut das M\xE4nnchen die Brut bis zum Freischwimmen der Larven. \r"
+  disabledFish: []
+  biologicalName: Hypancistrus spec.
+  species: Ancistrus
+  length: 10 cm

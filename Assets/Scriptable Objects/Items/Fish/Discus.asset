@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f0f7e9bd5db544eb8334664e392f84, type: 3}
+  m_Name: Discus
+  m_EditorClassIdentifier: 
+  tag: Discus
+  name: Discus
+  thumbnail: {fileID: 21300000, guid: 3a8812d3645375e4aaa12cc31af8f010, type: 3}
+  prefab: {fileID: 1040956189416564631, guid: 05601a31b1164d94b8156a80d9022da9, type: 3}
+  type: 1
+  furtherInformation: "Unter den Aquarienfischen ist der Diskus wohl mit Abstand
+    einer der imposantesten und \xE4ltesten Vertreter. Der auch Symphysodon aequifasciatusgenannte
+    Buntbarsch kommt urspr\xFCnglich aus S\xFCdamerika, wo er recht schwach flie\xDFende
+    Gew\xE4sser besiedelt. Daneben kommt er auch vom Rio Putumayo in Peru bis \xFCber
+    Kolumbien im s\xFCdbrasilianischen Amazonas vor. Strenger selektiver Zucht sind
+    heute viele verschiedene Varianten zu verdanken, bei der eine sch\xF6ner als
+    die andere ist und im Aquarium mit purer Eleganz aufwarten.\r\nDiskus verf\xFCgen
+    \xFCber den vorgenannten scheibenm\xE4\xDFigen K\xF6rperbau, weswegen sie auch
+    ihren deutschen Namen erhielten. In der Grundf\xE4rbung sind sie gelblich bis
+    grau mit mehr oder weniger ausgepr\xE4gten leuchtenden Streifen, die am Kopf
+    beginnen und sich \xFCber den K\xF6rper ziehen. Ihre Seitenlinie ist nach oben
+    gebogen. Die Afterflosse ist lang ausgebildet und weist ebenso wie die lange
+    R\xFCckenflosse das Farbmuster auf. Die Brustflossen sind eher transparent, die
+    Bauchflossen sind spitz ausgezogen, die ersten Flossenstrahlen k\xF6nnen strahlend
+    t\xFCrkis sein. Der Kopf endet kurz und spitz mit einem kleinen endst\xE4ndigen
+    Maul, das Auge ist verh\xE4ltnism\xE4\xDFig gro\xDF. Die Unterscheidung der Geschlechter
+    ist rein \xE4u\xDFerlich am ehesten \xFCber die Genitalpapille m\xF6glich- diese
+    ist abgerundet bei den Weibchen. Diskus werden ungef\xE4hr 12-15 Zentimeter gro\xDF
+    und k\xF6nnen bei sehr guter Pflege zwischen 12 und 15 Jahre alt werden.\r\nDie
+    Zucht von Diskus ist im Aquarium m\xF6glich, wird aber als schwierig und aufw\xE4ndig
+    beschrieben. Aus einer Gruppe Diskus kristallisieren sich nach einer Weile harmonisierende
+    P\xE4rchen heraus.\r\nDas Aquarium f\xFCr Diskus sollte gro\xDF sein, mindestens
+    aber eine Kantenl\xE4nge von 150 Zentimetern, besser auch mehr haben und ausreichend
+    hoch sein, da auch der Diskus eine entsprechende K\xF6rperh\xF6he hat. Au\xDFerdem
+    sind Diskus Schwarmfische, die Wert auf ihre Gruppe legen, um ihr artentsprechendes
+    Sozialverhalten auszuleben. Diese sollte daher mindestens aus 10 Tieren bestehen,
+    damit er nicht k\xFCmmert. Ein harmonisierendes P\xE4rchen kann ab 250 Litern
+    gepflegt werden. Grunds\xE4tzlich sollte das Aquarium sehr gut aufbereitet werden,
+    auch regelm\xE4\xDFige gro\xDFe Wasserwechsel sind bei der Haltung des Diskus
+    Pflicht, da er sehr sensibel auf Verunreinigungen reagiert. Moorkienwurzeln,
+    die unter Umst\xE4nden auch noch etwas \u201Eausbluten\u201C und dem Wasser so
+    einen Schwarzwassereffekt verleihen, sind im Diskus-Aquarium gern gesehen. Auch
+    kleinere Aufbauten aus Schiefer oder anderem nicht aufh\xE4rtenden Gestein bilden
+    eine gute Infrastruktur, denn Diskus sind stellenweise territorial. Trotzdem
+    sollte bei den \u201Esanften Giganten\u201C auf ausreichenden Schwimmraum geachtet
+    werden. Die Aquarienbeleuchtung sollte nicht allzu grell sein, dementsprechend
+    sollte auch die Bepflanzung mit geringeren Lichtverh\xE4ltnissen zurechtkommen.
+    Dazu eigenen sich unter anderem Anubias, aber auch Cryptocorynen oder Vallisnerien.\r\nDiskus
+    lassen sich gut auch mit anderen Fischen vergesellschaften, wenn sie mit deren
+    Wasserparametern zurechtkommen. Dazu eignet sich vor allem ein Schwarm Roter
+    Neons, Schmetterlingsbuntbarsche, aber auch Corydoras sterbai oder eine Gruppe
+    Rotkopfsalmler. Von Wirbellosen sollte aber eher abgesehen werden. Ausserdem
+    sind Skalare ungeeignet, da diese h\xE4ufig ein parasit\xE4rere Zwischenwirt
+    sind, der wiederum t\xF6dlich f\xFCr den Diskus enden kann.\r\nDer allesfressende
+    Diskus sollte abwechslungsreich und hochwertig gef\xFCttert werden. Dazu bieten
+    sich Lebend- und Frostfuttersorten an, wie schwarze und wei\xDFe M\xFCckenlarven
+    (rote bitte nicht!), Artemia, Grindal oder Enchytr\xE4en. Auch handels\xFCbliches
+    Trocken-, Flocken- oder Granulatfutter wird angenommen. Der pflanzliche Anteil
+    in ihrer Ern\xE4hrung sollte nicht zu kurz kommen. Vorteilhaft ist eine mehrmalige
+    t\xE4gliche sparsame F\xFCtterung.\r"
+  disabledFish: []
+  biologicalName: Symphysodon
+  species: Diskusfische
+  length: 15 - 20 cm

@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f0f7e9bd5db544eb8334664e392f84, type: 3}
+  m_Name: Neon Tetra Normal
+  m_EditorClassIdentifier: 
+  tag: Normal Neon Tetra
+  name: Neon Tetra
+  thumbnail: {fileID: 21300000, guid: 8f5633e09f2ebbb44bea11dd0c463bd2, type: 3}
+  prefab: {fileID: 652109559603496645, guid: 6ec1e34882bdbf349897e1ab373ba58d, type: 3}
+  type: 1
+  furtherInformation: "Der Rote Neon (Paracheirodon axelrodi), auch Kardinaltetra
+    genannt, geh\xF6rt zu den Salmlern und stammt aus S\xFCdamerika. Dort lebt er
+    in Fl\xFCssen mit huminstoffhaltigem, recht weichem Wasser.\r\nDieser h\xFCbsche
+    kleine, in der Aquaristik ausgesprochen beliebte Zierfisch wird 2,5 bis 5 cm
+    lang. Der kr\xE4ftig rote L\xE4ngsstreifen entlang der Unterseite gab ihm seinen
+    Namen. Auffallend auch der neonfarben schillernde blaue L\xE4ngsstreifen dar\xFCber.\r\nDie
+    Weibchen sind etwas kr\xE4ftiger als die M\xE4nnchen und haben \"mehr Bauch\".
+    In der Natur wird der Rote Neon nur ungef\xE4hr ein Jahr alt, im Aquarium wird
+    von 10 Jahren und mehr an Lebenserwartungberichtet.\r\nDer Rote Neon ist ein
+    Schwarmfisch und sollte in Gruppen von 10 Exemplaren oder mehr gehalten werden.\r\nDie
+    Vermehrung des Roten Neon im Aquarium ist schwierig. Hierzu wird sehr weiches,
+    saures Wasser mit einem pH-Wert von ca. 5 und ungef\xE4hr 25 \xB0C ben\xF6tigt.
+    Ein separates Aufzuchtbecken ist absolut notwendig, die Alttiere fressen Larven.
+    Die Jungfische werden mit Artemianauplien gro\xDF gezogen..\r\nAn die Wasserwerte
+    zur Haltung hat der Rote Neon viel weniger Anspr\xFCche. Er braucht eher weiches
+    bis mittelhartes Wasser und eine Temperatur von 22-30 \xB0C.\r\nAls typischer
+    R\xE4uber frisst dieser Salmler neben dem \xFCblichen Fischfutter auch tierische
+    Kost in Form von Frostfutter, gefriergetrocknetem FD Futter oder Lebendfutter.\r\nDie
+    Vergesellschaftung des relativ friedlichen, klein bleibenden Roten Neon mit Zwerggarnelen
+    ist m\xF6glich. Es kann allerdings vorkommen, dass dieser Aquarienfisch Junggarnelen
+    frisst, ihn sollte man nur mit robusten und sich sehr gut vermehrenden Arten
+    wie zum Beispiel Neocaridina davidi oder mit der Sulawesi-Inlandsgarnele im Aquarium
+    halten.\r"
+  disabledFish: []
+  biologicalName: Paracheirodon innesi
+  species: Paracheirodon
+  length: 3.5 - 4 cm

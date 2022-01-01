@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f0f7e9bd5db544eb8334664e392f84, type: 3}
+  m_Name: Neon Tetra Green
+  m_EditorClassIdentifier: 
+  tag: Green Neon Tetra
+  name: Green Neon (Zwergrasbora)
+  thumbnail: {fileID: 21300000, guid: 29326590d06d093449df1827be683295, type: 3}
+  prefab: {fileID: 6398547036509862092, guid: 6ce5f1473eec6e64085ecdf5f5e8883e, type: 3}
+  type: 1
+  furtherInformation: "Green Neon Zwergrasboras, Microdevario kubotai, sind noch
+    gar nicht so lange in der Aquaristik bekannt, haben aber jetzt schon einen gro\xDFen
+    Fankreis. Sie sind auch als Smaragd-Zwergrasbora oder Neongr\xFCner Zwergb\xE4rbling
+    bekannt und z\xE4hlen zu den sogenannten Minifischen. Dieser kleine Ostasiate
+    stammt vorwiegend aus Thailand und Myanmar, wo er Gew\xE4sser mit einer eher
+    schwachen Str\xF6mung bewohnt und verkrautete Uferregionen besiedelt, in denen
+    er vorzugsweise auch laicht. Dieses gerade einmal 2-3,5 cm gro\xDF werdende Fischchen
+    hat eine gr\xFCngelbe Grundfarbe mit smaragdschimmernden L\xE4ngsb\xE4ndern,
+    wobei sogar das Auge, die Kiemendeckel und die Bauchseite irisieren, je nach
+    Lichteinfall. Die Flossen des Green Neon Zwergrasbora sind durchscheinend transparent.\r\nDie
+    M\xE4nnchen des Green Neon Zwergrasboras bleiben im K\xF6rperumfang etwas hinter
+    den rundlicheren Weibchen zur\xFCck. Die Zucht im Aquarium ist m\xF6glich. Da
+    die Zwergrasboras keine Laichr\xE4uber sind, kann man sie im Gemeinschaftsaquarium
+    nachz\xFCchten. Ein Aufzuchtsaquarium eignet sich aber dennoch besser, da die
+    Jungen hier gezielt mit Infusorien und Pantoffeltierchen angef\xFCttert und aufgezogen
+    werden k\xF6nnen. Zur Zucht sollte das Wasser zudem sehr sauer sein.\r\nGreen
+    Neon Zwergrasboras k\xF6nnen prima in Aquarien ab 60 Litern gepflegt werden.
+    Zur Gestaltung eignen sich vor allem stellenweise dichte Pflanzenbest\xE4nde,
+    in die sie sich zur\xFCck ziehen k\xF6nnen, aber auch eine Strukturiereung des
+    Bodengrundes in Form von Wurzeln und Steinen. Da der Neongr\xFCne Zwergb\xE4rbling
+    ein Schwarmfisch ist, empfehlen wir, ihn mindestens in einer Gruppe ab 6 Tieren
+    zu halten, damit er zudem sein arttypisches freundliches Verhalten zeigen kann.
+    Das Wasser sollte eine Gesamth\xE4rte (GH) von 1-20 \xB0 dGH betragen, sowie
+    einen pH-Wert zwischen 6 und 7 und eine Temperatur zwischen 22-26 \xB0C haben.
+    Werden die Tiere von vorne oder der Seite angeleuchtet, strahlen ihre Farben
+    besonders pr\xE4chtig.\r\nGreen Neon Zwergrasboras sind friedliche und vertr\xE4gliche
+    Fische, die hervorragend auch mit Zwerggarnelen, Amanogarnelen und F\xE4chergarnelen
+    zusammen gehalten werden k\xF6nnen, wenn diese \xE4hnliche Anspr\xFCche an ihre
+    Wasserparameter haben. Ebenso k\xF6nnen sie gut mit dem Roten Neon und \xE4hnlichen
+    kleinen friedlichen Fischen wie Microrasboras, aber auch Zwergpanzerwelsen vergesellschaftet
+    werden.\r\nDiese Allesfresser ern\xE4hren sich in ihrem Habitat unter anderem
+    von Kleinstkrebsen, die sie aus Aufwuchs heraus picken und k\xF6nnen im Aquarium
+    daher optimal mit Nanofischfutter, Granulatfutter oder sehr feinem (zerbr\xF6seltem)
+    Flockenfutter f\xFCr omnivore Fische gef\xFCttert werden. Gelegentliches F\xFCttern
+    mit kleinem und sehr kleinem Lebend- und Frostfutter, wie zum Beispiel Cyclops,
+    Artemia-Nauplien oder Enchytr\xE4en peppen ihren Speiseplan auf.\r"
+  disabledFish: []
+  biologicalName: Microdevario kubotai
+  species: Paracheirodon
+  length: 3.5 - 4 cm

@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f0f7e9bd5db544eb8334664e392f84, type: 3}
+  m_Name: L018 Golden Nugget
+  m_EditorClassIdentifier: 
+  tag: L018 Golden Nugget Ancistrus
+  name: L018 Golden Nugget
+  thumbnail: {fileID: 21300000, guid: b4120045291c78f47b59ab96eaa6264a, type: 3}
+  prefab: {fileID: 6540928557086150675, guid: 187f6023194567a4a8516804e547c465, type: 3}
+  type: 1
+  furtherInformation: "Der aus dem Rio Xingu in Brasilien stammende Orangesaum-Prachtharnischwels
+    taucht im Handel h\xE4ufig unter der Bezeichnung Baryancistrus Golden Nugget
+    auf. Bei L018 handelt es sich um die Jugendform des L085.\r\nIn einem gut gefilterten
+    150 l Aquarium, das ausreichend H\xF6hlen anbietet, l\xE4sst sich dieser h\xFCbsche
+    Wels gut in einer kleinen Gruppe pflegen. Als Bodengrund empfiehlt sich Sand
+    oder feiner Kies ohne scharfe Kanten. Weiches Wurzelholz bietet Unterschlupf
+    und die M\xF6glichkeit, diese abzuraspeln. Auch diese Welse gehen an die Aquarienpflanzen,
+    was zwar durch Gr\xFCnfuttergabe gemildert, aber nicht verhindert werden kann.
+    Daher w\xE4ren Schwimmpflanzen eine Alternative, zumal diese f\xFCr eine, dem
+    Wels angenehme, Beschattung sorgen.\r\nDer pH-Wert f\xFCr Baryancistrus xanthellus
+    L 018 sollte zwischen 5,5 und 7,5 liegen und der H\xE4rtebereich bei ca. 2 bis
+    10\xB0 dGH. Die Fische f\xFChlen sich bei einer Wassertemperatur zwischen 28-32\xB0
+    Celsius wohl. Obwohl Baryancistrus xanthellus L018 ein Pflanzenfresser ist, sollte
+    er gelegentlich mit Frostfutter gef\xFCttert werden. Ansonsten eignet sich Gr\xFCnfutter
+    wie rohe Kartoffeln, Gurken und Salat und nat\xFCrlich Wels-Tabletten oder \u2013
+    Chips. Der Orangesaum-Prachtharnischwels erreicht eine K\xF6rperl\xE4nge von
+    maximal 25 cm, wobei die Tiere im Aquarium nur etwa 20 cm erreichen. \xDCber
+    die Zucht in Aquarien ist vom Baryancistrus xanthellus L 018 bisher noch nichts
+    bekannt.\r"
+  disabledFish: []
+  biologicalName: Baryancistrus xanthellus
+  species: Ancistrus
+  length: 10 cm

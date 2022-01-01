@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f0f7e9bd5db544eb8334664e392f84, type: 3}
+  m_Name: "Gl\xFChlichtsalmler"
+  m_EditorClassIdentifier: 
+  tag: "Gl\xFChlichtsalmler"
+  name: "Gl\xFChlichtsalmler"
+  thumbnail: {fileID: 21300000, guid: 58bd5cceddd67c14ea0cd020132cedd2, type: 3}
+  prefab: {fileID: 669199621192630142, guid: 53b8b9081b5d16e47bc467d91d016dc5, type: 3}
+  type: 1
+  furtherInformation: "Der im Aquarien Hobby seit fast hundert Jahren bekannte und
+    ausgesprochen beliebte s\xFCdamerikanische Gl\xFChlichtsalmler (Hemigrammus erythrozonus)
+    bleibt 3,5 bis maximal 4,5 cm L\xE4nge recht klein.\r\nGl\xFChlichtsalmler haben
+    einen roten L\xE4ngsstreifen mittig entlang ihres ansonsten graubraun bis olivgr\xFCn
+    gef\xE4rbten K\xF6rpers, unterhalb ist der Hinterleib oft dunkler gef\xE4rbt.
+    Die obere H\xE4lfte ihrer Augen ist rot, auch die R\xFCckenflosse hat einen feinen
+    rote Streifen. Die Flossenenden sind wei\xDF, was wie kleine Gl\xFChfunken wirkt.
+    Die Weibchen wirken etwas massiger und dicker als die relativ schlanken M\xE4nnchen.\r\nHemigrammus
+    erythrozonus ist ein friedlicher kleiner Gruppenfisch, der erst bei Stress zu
+    einem Schwarm zusammenfindet und sonst eher einzeln oder in kleinen Gr\xFCppchen
+    zwischen den Pflanzen unterwegs sind. Die Gruppenst\xE4rke sollte 10 Tiere nicht
+    unterschreiten.\r\nIm Aquarium l\xE4sst sich Hemigrammus erythrozonus nachziehen,
+    auch wenn er dabei besondere Bed\xFCrfnisse hat: Der Gl\xFChlichtsalmler bevorzugt
+    zur Zucht recht weiches Wasser mit einem sauren pH Wert von ca. 5,0 bis 7 und
+    eine Temperatur von etwa 28 \xB0C. Das Zuchtaquarium sollte abgedunkelt werden,
+    dazu eignen sich zum Beispiel Schwimmpflanzen. Moosb\xFCschel sind f\xFCrs Ablaichen
+    gut geeignet. Der Gl\xFChlichtsalmler ist ein Freilaicher. Junge Gl\xFChlichtsalmler
+    wachsen recht schnell heran. Sie werden optimal gro\xDF, wenn man sie reichlich
+    mit Artemianauplien und weiterem feinem Lebendfutter wie Cyclops f\xFCttert.
+    Nach ca. acht Monaten sind die Jungfische dann schon geschlechtsreif. Mittlerweile
+    stammen die Gl\xFChlichtsalmler in der Aquaristik ganz \xFCberwiegend nicht mehr
+    aus der Natur, sondern sind Nachzuchten.\r\nIm Biotop lebt der Gl\xFChlichtsalmler
+    in schattigen B\xE4chen im tropischen Wald, im Aquarium mag er es gerne dicht
+    bepflanzt, aber auch etwas Platz zum Schwimmen sollte vorhanden sein. Hemigrammus
+    erythrozonus mag weicheres bis mittelhartes Wasser und relativ hohe Temperaturen
+    von ca. 23-28 \xB0C.\r\nWie die allermeisten Salmler ist der Gl\xFChlichtsalmler
+    ein Allesfresser, der in der Natur auch mal gerne Kleinkrebse nascht. Neben Lebendfutter
+    und Frostfutter ist Flockenfutter oder Granulatfutter f\xFCr die Allesfresser
+    unter den Aquarienfischen sicherlich die richtige Wahl.\r\nDie relativ klein
+    bleibenden Gl\xFChlichtsalmler vergehen sich nicht an gr\xF6\xDFeren Garnelen,
+    Junggarnelen k\xF6nnen jedoch durchaus einmal gefuttert werden. Die Vergesellschaftung
+    mit sich gut vermehrenden Arten wie Neocaridina oder Sulawesi Inlandsgarnelen,
+    mit F\xE4chergarnelen oder Amanogarnelen funktioniert recht gut. Hemigrammus
+    erythrozonus kann beispielsweise auch mit friedlichen Zwergkrebsen vergesellschaftet
+    werden.\r"
+  disabledFish: []
+  biologicalName: Hemigrammus erythrozonus
+  species: "Gl\xFChlichtsalmler"
+  length: 3 cm

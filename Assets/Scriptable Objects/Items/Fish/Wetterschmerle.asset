@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f0f7e9bd5db544eb8334664e392f84, type: 3}
+  m_Name: Wetterschmerle
+  m_EditorClassIdentifier: 
+  tag: Wetterschmerle
+  name: Wetterschmerle
+  thumbnail: {fileID: 21300000, guid: 5f585b3aa6b6e834da8aa7d1c6ed6343, type: 3}
+  prefab: {fileID: 5147895145283047515, guid: 0972d080dd3bf6645829e661e24fb056, type: 3}
+  type: 1
+  furtherInformation: "Der Ostasiatische Schlammpeitzger, wissenschaftlich Misgurnus
+    anguillicaudatus geh\xF6rt zur Familie der Steinbei\xDFer (Cobitidae). Das nat\xFCrliche
+    Verbreitungsgebiet dieser Art liegt in Nordostasien, wo sie in China und Nordost-Myanmar,
+    sowie auf Taiwan und den Inseln Japans vorkommt. Der Ostasiatische Schlammpeitzger
+    wird auch als Wetterfisch bezeichnet.\r\nDieser Fisch mag schlammigen Boden stehender
+    oder langsam flie\xDFender Gew\xE4sser. Er h\xE4lt sich tags\xFCber verborgen
+    und ist nachtaktiv. Er kann in Teichen und in Aquarien ab 100 cm L\xE4nge gehalten
+    werden. Der Fisch sollte stets zu mehreren gepflegt werden. Das bevorzugte Temperaturspektrum
+    liegt zwischen 10-25\xB0 Celsius.\r\nMisgurnus anguillicaudatus hat einen aalartig
+    langgestreckten K\xF6rper. Er ist ein bis zu 28 Zentimeter langer S\xFC\xDFwasserfisch.
+    Er ist oberseits gelblich-braun bis braun mit gr\xFCnlich grau-brauner bis dunkelbrauner
+    Marmorierung, die sich auch auf der R\xFCcken- und Afterflosse finden. Der Bauch
+    ist hellgelblich bis blasssilbrig.\r\nDer Ostasiatische Schlammpeitzger ern\xE4hrt
+    sich von Wirbellosen, Larven von Insekten, kleinen Krebsen, Schnecken und Muscheln,
+    die am Gew\xE4sserboden gesucht werden.\r\nDieser Fisch zeigt ein interessantes
+    Laichverhalten, M\xE4nnchen (Milchner) und Weibchen (Rogner) umschl\xE4ngeln
+    einander. Die Laichzeit liegt zwischen April und Juni, w\xE4hrend dieser Zeit
+    werden die Eier an Pflanzen und deren Wurzeln abgelegt.\r\nEine Besonderheit
+    ist auch die ausgepr\xE4gte Atmung \xFCber den Darm. Sauerstoff, der an der Oberfl\xE4che
+    geschluckt wird, gelangt in den Darm und wird dort \xFCber die Blutgef\xE4\xDFe
+    aufgenommen. Dies unterst\xFCtzt die Kiemenatmung so gut, dass der Ostasiatische
+    Schlammpeitzger auch in sehr sauerstoffarmen Gew\xE4ssern vorkommt.\r\nMisgurnus
+    anguillicaudatus als Wetterfisch: Vor einem Wetterwechsel wird die Art oft unruhig
+    und schnappt h\xE4ufig an der Wasseroberfl\xE4che nach Luft.\r"
+  disabledFish: []
+  biologicalName: Misgurnus anguillicaudatus
+  species: Schlammpeitzger
+  length: 28 cm

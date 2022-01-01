@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d969f6317926e4b9eca62dc37a773f, type: 3}
+  m_Name: R_640L_180cm
+  m_EditorClassIdentifier: 
+  tag: Tank
+  name: Luke 640 L
+  thumbnail: {fileID: 21300000, guid: 20329300345337648a400ae4d6d596e8, type: 3}
+  prefab: {fileID: 8062764495802036072, guid: 8e4b90a033e8564428921fc4a6bd1545, type: 3}
+  type: 0
+  furtherInformation: "Ein besserer Vater als Valentine es jemals sein k\xF6nnte."
+  disabledFish: []
+  width: 180 cm
+  height: 99 cm
+  depth: 99 cm
+  volume: 640 L
+  decorScaleMin: 1.5
+  decorScaleMax: 2
+  plantScaleMax: 7
+  maxSpawnRadius: 0.7

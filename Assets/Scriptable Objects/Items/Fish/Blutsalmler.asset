@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f0f7e9bd5db544eb8334664e392f84, type: 3}
+  m_Name: Blutsalmler
+  m_EditorClassIdentifier: 
+  tag: Blutsalmler
+  name: Blutsalmler
+  thumbnail: {fileID: 21300000, guid: 0a51b4727c9efd4469bf271121e9be79, type: 3}
+  prefab: {fileID: 8104640713320589712, guid: a48fb038ce599674f8362439e73bb0b9, type: 3}
+  type: 1
+  furtherInformation: "Der quirlige Blutsalmler, auch bekannt als Serpaesalmler oder
+    Serpasalmler (Hyphessobrycon eques, fr\xFCher: Hyphessobrycon serpae) stammt
+    urspr\xFCnglich aus dem s\xFCdamerikanischen Amazonasgebiet und geh\xF6rt zu
+    den Echten Salmlern.\r\nDie hochr\xFCckigen Aquarienfische sind orange r\xF6tlich
+    gef\xE4rbt. H\xE4ufig haben sie einen mehr oder weniger gro\xDFen schwarzen Fleck
+    hinter der Wange, und auch die R\xFCckenflosse tr\xE4gt einen schwarzen, hinten
+    wei\xDF ges\xE4umten Fleck. Die Bauchflosse ist schwarz ges\xE4umt. Die salmlertypische
+    Fettflosse f\xE4llt beim Blutsalmler eher klein aus. Die F\xE4rbung der Weibchen
+    ist weniger intensiv als die der M\xE4nnchen, daf\xFCr sind sie etwas h\xF6her
+    und auch etwas rundlicher. Blutsalmler werden ungef\xE4hr 4 cm lang.\r\nBlutsalmler
+    passen in ein Gesellschaftsaquarium mit anderen robusten Fischen vorzugsweise
+    aus S\xFCdamerika. Da Hyphessobrycon eques ein recht durchsetzungsf\xE4higer
+    Aquarienfisch ist, sollte er nicht zu sehr ruhigen Fischen ins Aquarium kommen.
+    Bei falscher F\xFCtterung ist es m\xF6glich, dass der Blutsalmler die Flossen
+    anderer Fische anknabbert. Kleine Garnelen werden gefressen, daher sollte der
+    Serpaesalmler nur zu gr\xF6\xDFeren Garnelenarten wie Amanogarnelen ins Aquarium
+    gesetzt werden, oder zu sich sehr gut vermehrenden Garnelen wie Red Fire (Neocaridina
+    davidi) oder Sulawesi Inlandsgarnelen. Diese Garnelen ben\xF6tigen dann viele
+    Versteckpl\xE4tze und fein strukturierte Pflanzen wie zum Beispiel dichte Polster
+    von Aquarienmoos.\r\nBlutsalmler sind vorwiegend in den mittleren Wasserschichten
+    anzutreffen und bieten Zwergkrebsen damit eventuell etwas mehr Angriffsfl\xE4che
+    als andere Salmler, die sich \xFCberwiegend im oberen Bereich des Aquariums aufhalten.
+    Hier sollten nur eher friedlich gesonnene Zwergkrebse vergesellschaftet werden.\r\nBlutsalmler
+    brauchen Platz zum Schwimmen und eine ordentliche Randbepflanzung zum Verstecken.
+    Sie kommen aus unbeschatteten Biotopen und brauchen daher nicht unbedingt ein
+    abgeschattetes Aquarium.\r\nAls Schwarmfisch sollte der Blutsalmler mit 10 Artgenossen
+    in einem ausreichend gro\xDFen Aquarium von mindestens 150 Litern gehalten werden.
+    Ein \xDCberbesatz und eine zu enge Haltung f\xFChrt zu ernsthaften innerartlichen
+    Reibereien. Dabei kann es zu Flossensch\xE4den kommen, sie heilen allerdings
+    bei dieser Fischart sehr schnell ab. Blutsalmler k\xF6nnen im Aquarium bei guter
+    Haltung etwa 5 Jahre alt werden.\r\nBlutsalmler m\xF6gen im Aquarium weiches
+    bis mittelhartes Wasser und einem hohen Gehalt an Huminstoffen. Die Wassertemperatur
+    sollte zwischen 23 und 28 Grad liegen.\r\nF\xFCr die Zucht ben\xF6tigt Hyphessobrycon
+    eques eher weiches und leicht saures Wasser mit 26-28 \xB0C. Ein P\xE4rchen des
+    Blutsalmlers wird zum Ablaichen in ein Zuchtaquarium von 54 Litern mit feinfiedrigen
+    Pflanzen oder Moosen als Laichsubstrat gesetzt. Blutsalmler sind Freilaicher,
+    das Weibchen legt also seine Eier im Wasser ab, die dann in die Pflanzenpolster
+    absinken. Vor der Paarung jagt das M\xE4nnchen das Weibchen intensiv. Nach dem
+    Ablaichen sollten die Alttiere ins gro\xDFe Becken zur\xFCckgesetzt werden, damit
+    sie die Eier nicht fressen. Die Jungfische lassen sich nach dem \xDCbergang zum
+    freien Schwimmen zun\xE4chst mit Infusorien und dann mit Artemianauplien aufziehen.\r\nBlutsalmler
+    m\xF6gen wie der \xFCberwiegende Teil der s\xFCdamerikanischen Echten Salmler
+    gerne abwechslungsreiche Kost. Neben tierischer Nahrung (Frostfutter, Lebendfutter)
+    fressen sie auch pflanzliche Kost. Mit einem Flockenfutter f\xFCr omnivore Aquarienfische
+    sind sie daher gut bedient. Frostfutter oder Lebendfutter sollte dennoch immer
+    Teil des w\xF6chentlichen Speiseplans sein.\r"
+  disabledFish: []
+  biologicalName: Hyphessobrycon eques
+  species: 'Blutsalmler '
+  length: 3 cm

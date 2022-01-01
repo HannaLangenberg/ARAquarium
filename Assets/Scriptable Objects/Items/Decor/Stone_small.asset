@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0f11d79531ccd84cb2a77140486070b, type: 3}
+  m_Name: Stone_small
+  m_EditorClassIdentifier: 
+  tag: Stone small
+  name: Stein (klein)
+  thumbnail: {fileID: 21300000, guid: 4e608b2852531cf489a374d3b5e6ecd4, type: 3}
+  prefab: {fileID: 5881135699378066008, guid: da97fbcc28aa5074aa7340766a4dfeb5, type: 3}
+  type: 3
+  furtherInformation: Ein kleiner Stein.
+  disabledFish: []
+  width: 4.5 cm
+  height: 7 cm
+  depth: 5 cm

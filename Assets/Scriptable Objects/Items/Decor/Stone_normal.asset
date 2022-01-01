@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0f11d79531ccd84cb2a77140486070b, type: 3}
+  m_Name: Stone_normal
+  m_EditorClassIdentifier: 
+  tag: Stone normal
+  name: Stein
+  thumbnail: {fileID: 21300000, guid: cf7d1f37ab915724aadf595509998095, type: 3}
+  prefab: {fileID: 7726062237428929950, guid: ef66cfd67675f6c46b1b59c0ebd32d32, type: 3}
+  type: 3
+  furtherInformation: Ein normaler Stein.
+  disabledFish: []
+  width: 5.5 cm
+  height: 5 cm
+  depth: 10 cm

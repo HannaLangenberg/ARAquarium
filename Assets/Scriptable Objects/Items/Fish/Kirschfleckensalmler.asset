@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f0f7e9bd5db544eb8334664e392f84, type: 3}
+  m_Name: Kirschfleckensalmler
+  m_EditorClassIdentifier: 
+  tag: Kirschfleckensalmler
+  name: Kirschfleckensalmler
+  thumbnail: {fileID: 21300000, guid: 5027385f1bc689c4a9ab84e3d4cbc353, type: 3}
+  prefab: {fileID: 5484875771936679102, guid: f4bff5a511a2c8243ab063ff76eb5fe3, type: 3}
+  type: 1
+  furtherInformation: "Dieser faszinierend sch\xF6ne Zierfisch hat seinen Namen von
+    seinem kirschroten Punkt auf dem K\xF6rper. Der Kirschflecksalmler (Hyphessobrycon
+    erythrostigma) aus dem Amazonasbecken in S\xFCdamerika ist ein sehr geselliger
+    und sehr friedlicher etwas gr\xF6\xDFer werdender Salmler. Der h\xFCbsche Zierfisch
+    wird beeindruckende 8-9 cm lang. Die Weibchen erreichen dabei eine etwas gr\xF6\xDFere
+    K\xF6rperl\xE4nge als die m\xE4nnlichen Kirschflecksalmler.\r\nKirschflecksalmler
+    zeichnen sich durch ihren ros\xE9farbenen K\xF6rper aus. Die ansonsten wei\xDFe
+    R\xFCckenflosse ziert ein gro\xDFer, dynamisch schr\xE4g verlaufender schwarzer
+    Fleck. Die Schwanzflosse ist transparent. Die mehr oder weniger transparente
+    Afterflosse des Kirschflecksalmlers ist auffallend langgezogen. Sie hat am Bauch
+    eine wei\xDFliche Zeichnung und l\xE4uft zum Schwanzbereich hin ins Rote aus.
+    Auffallend ist die leuchtend rote Iris des Auges und der namensgebende intensiv
+    rot leuchtende Kirschfleck in der K\xF6rpermitte. Die M\xE4nnchen sind intensiver
+    in der Farbe als die Weibchen.\r\nHyphessobrycon erythrostigma ist ein sehr sozialer
+    und friedlicher Schwarmfisch, der sich in entspannter Stimmung auch mal einzeln
+    im Aquarium herumtreibt, sich bei Stress jedoch sofort zur Gruppe zusammenfindet.
+    Eine Gruppenst\xE4rke von 10 Kirschflecksalmlern ist daher Mindestbedingung.
+    Die M\xE4nnchen bilden Reviere und zeigen Revierverhalten, k\xE4mpfen aber nicht
+    gegeneinander. Da der Kirschflecksalmler doch recht gro\xDF wird, sollte das
+    Aquarium 200-250 l Fassungsverm\xF6gen haben. Entlang der R\xE4nder sollte das
+    Aquarium gut bepflanzt sein, in der Mitte m\xF6gen die Fische gerne etwas Platz
+    zum Schwimmen. Hyphessobrycon erythrostigma bevorzugt weiches bis maximal mittelhartes
+    Wasser. Die Wassertemperatur im Aquarium sollte zwischen 23 und 28 \xB0C liegen.\r\nDieser
+    h\xFCbsche, etwas gr\xF6\xDFer werdende Schwarmfisch passt sehr gut in ein Gesellschaftsaquarium
+    mit anderen friedlichen nicht zu kleinen Fischen. Auch eine Haltung in einem
+    Aquarium mit wenigen und friedlichen Zwergkrebsen ist denkbar. Zwerggarnelen
+    k\xF6nnen gefressen werden, gr\xF6\xDFere Garnelen wie Amanos oder F\xE4chergarnelen
+    haben jedoch nichts zu bef\xFCrchten.\r\nAls typischer Salmler ist der auff\xE4llig
+    gef\xE4rbte Kirschflecksalmler ein Allesfresser, der sich in der Natur sowohl
+    von Insekten und Larven, W\xFCrmern und Kleinkrebsen wie auch von pflanzlichem
+    Material ern\xE4hrt. Im Aquarium bekommt man ihn mit den g\xE4ngigen hochwertigen
+    Flockenfuttern oder Granulatfuttern f\xFCr allesfressende Fische gut satt. Ab
+    und zu sollten Sie den Speiseplan des Kirschflecksalmlers mit Lebendfutter und
+    Frostfutter bereichern.\r\nDie Zucht von Hyphessobrycon erythrostigma ist ein
+    bisschen komplizierter als bei anderen Salmlern. Das Zuchtbecken braucht sehr
+    weiches und leicht saures Wasser mit einer Gesamth\xE4rte von ca. 3 und sollte
+    nicht unter 80 Liter haben. Ganz wichtig: Das Wasser sollte m\xF6glichst kein
+    Nitrat enthalten und mit Huminstoffen angereichert werden. Hier wird ein Paar
+    Kirschflecksalmler eingesetzt. Die Bepflanzung ist wichtig: feinfiedrige Wasserpflanzen
+    wie Javamoos helfen bei der Bewahrung der Eier - salmlertypisch ist der Kirschflecksalmler
+    n\xE4mlich ein ziemlicher Laichr\xE4uber. Ein Laichrost oder dicke Kiesel am
+    Boden helfen ebenfalls. Als Freilaicher legt das Weibchen seine Eier einfach
+    ins Freiwasser ab, wo sie vom M\xE4nnchen befruchtet werden. Die Elternfische
+    werden nach dem Ablaichen wieder herausgefangen und ins Gesellschaftsaquarium
+    zur\xFCckgesetzt. Die Larven des Kirschflecksalmlers schl\xFCpfen nach ungef\xE4hr
+    ein bis zwei Tagen und werden dann mit R\xE4dertierchen und Artemianauplien aufgezogen.\r"
+  disabledFish: []
+  biologicalName: Hyphessobrycon erythrostigma
+  species: Kirschfleckensalmler
+  length: 3 cm

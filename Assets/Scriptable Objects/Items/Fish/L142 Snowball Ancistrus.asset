@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f0f7e9bd5db544eb8334664e392f84, type: 3}
+  m_Name: L142 Snowball Ancistrus
+  m_EditorClassIdentifier: 
+  tag: L142 Snowball Ancistrus
+  name: L142 Snowball Ancistrus
+  thumbnail: {fileID: 21300000, guid: f993041f6b7af764cb197b6ad7809a22, type: 3}
+  prefab: {fileID: 589061885345211404, guid: aa476da8649285441a46956d661a7a1d, type: 3}
+  type: 1
+  furtherInformation: "Schneeball-Prachtharnischwels, L142 Baryancistrus spec. Snowflake
+    (LDA33)\r\nBei dem im brasilianischen Rio Tapaj\xF3s beheimateten Schneeball-Prachtharnischwels
+    (Synonyme: Snowball-Pleco, LDA33) handelt es sich um einen zur Familie der Harnischwelse
+    geh\xF6renden Fisch mit einer schwarzen Grundf\xE4rbung und auffallenden wei\xDFen
+    Punkten der Musterung. Ziemlich markant sind auch der breite Kopf und das gro\xDFe
+    Saugmaul.\r\n\r\nIm Aquarium erlangt der Schneeball-Prachtharnischwels eine Gr\xF6\xDFe
+    von \xFCber 20 cm, weshalb insbesondere bei ausgewachsenen Fischen ein Becken
+    ab 150 cm Kantenl\xE4nge angebracht ist. Der pH-Wert des Wassers sollte zwischen
+    5-7 und die Temperatur zwischen 26-30\xB0C betragen. Ihnen als Halter sollte
+    bewusst sein, dass es sich bei diesem Exemplar wegen dem hohen Pflegeaufwand
+    um keinen Anf\xE4ngerfisch handelt.\r\n\r\nDie Beckengestaltung richtet sich
+    nach den Bed\xFCrfnissen der Tiere. \xC4hnlich wie bei vielen anderen Welsen
+    haben Sie auch hier f\xFCr ausreichend Versteckm\xF6glichkeiten in Form von H\xF6hlen,
+    R\xF6hren, Steinaufbauten, Schieferplatten oder Wurzeln zu sorgen, da insbesondere
+    junge Tiere sehr sch\xFCchtern sind. Als Bodengrund eignen sich Sandboden oder
+    feiner Kies. Von der scharfkantigen Variante ist aufgrund von Verletzungsgefahr
+    abzuraten. Auch sollte das Aquarium nicht zu klein gew\xE4hlt sein, um eine Einteilung
+    in Territorien vornehmen und somit Streitereien vorbeugen zu k\xF6nnen. Hierzu
+    eignen sich besonders Schieferplatten, gro\xDFe Wurzeln und Steinaufbauten. Da
+    Welse sehr kr\xE4ftig werden k\xF6nnen wird geraten, diese mit Silikon und Schrauben
+    zu sichern. Von besonderer Relevanz ist allerdings der Einsatz von weichen Wurzeln,
+    die dem Schneeball-Prachtharnischwels als Nahrungserg\xE4nzung und Versteck dienen.
+    Eine Schwimmpflanzendecke wirkt sich positiv auf das Wohlbefinden der Tiere aus,
+    da diese sich von oben gesch\xFCtzter f\xFChlen. Andere Pflanzen k\xF6nnen angeknabbert
+    werden!\r\n\r\nKaum ein Halter hat die Zeit f\xFCr eine optimale Pflege. Neben
+    einer mehrmals t\xE4glichen F\xFCtterung mit Gurken, Karotten oder auch mal Kartoffeln
+    hat dieser Fisch recht gro\xDFe Probleme mit zu starker Wasserbelastung, weshalb
+    das Wasser mehrmals w\xF6chentlich teilgewechselt werden sollte, ein Minimum
+    ist hier 60% auf die gesamte Woche bezogen. Ansonsten empfiehlt sich dar\xFCberhinaus
+    eine gute Filterung.\r\n\r\nObgleich erfolgreiche Nachzuchten bei Schneeball-Prachtharnischwelsen
+    bekannt sind, liegen bis jetzt noch keine tats\xE4chlichen schriftlichen Berichte
+    oder gar Bilder vor. "
+  disabledFish: []
+  biologicalName: Peckoltia sabaji
+  species: Ancistrus
+  length: 10 cm
