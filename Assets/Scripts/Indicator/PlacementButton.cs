@@ -27,8 +27,8 @@ namespace Indicator
             _keepMe = _keepMeARSessionOrigin.GetComponent<KeepMe>();
             _aRraycastManager = FindObjectOfType<ARRaycastManager>();
             
-            _aquariumInstance = _keepMe.GETAquariumInstance();
-            _keepMe.transform.GetChild(0).DetachChildren();
+            _aquariumInstance = KeepMe.GETAquariumInstance();
+            _keepMeARSessionOrigin.transform.GetChild(0).DetachChildren();
             _aquariumInstance.transform.position = Vector3.zero;
             _aquariumInstance.transform.rotation = Quaternion.identity;
             _aquariumInstance.transform.localScale = Vector3.one;
