@@ -461,14 +461,28 @@ namespace Display
         {
             bool successful;
             ApplyRandomRotation(inventorySlot);
-            SpawnAroundCenterPoint(inventorySlot);
+            if (inventorySlot.item.tag.Contains("Ancistrus"))
+            {
+                CalcPosAndRotAndScl(inventorySlot);
+            }
+            else
+            {
+                SpawnAroundCenterPoint(inventorySlot);
+            }
             var counter = 0;
             Collider[] results = {new Collider()};
             while (Physics.OverlapBoxNonAlloc(_centerPoint,
                        inventorySlot.item.prefab.GetComponent<MeshRenderer>().bounds.extents, results, _rotation) > 0
                    && counter < 30)
             {
-                SpawnAroundCenterPoint(inventorySlot);
+                if (inventorySlot.item.tag.Contains("Ancistrus"))
+                {
+                    CalcPosAndRotAndScl(inventorySlot);
+                }
+                else
+                {
+                    SpawnAroundCenterPoint(inventorySlot);
+                }
                 counter++;
             }
 
@@ -563,7 +577,10 @@ namespace Display
         {
             var tankBounds = _tankInstance.GetComponent<MeshRenderer>().bounds;
             ApplyRandomRotation(inventorySlot);
-            ApplyRandomScale(inventorySlot);
+            if (!inventorySlot.item.type.Equals(ItemType.Fish))
+            {
+                ApplyRandomScale(inventorySlot);
+            }
             var otherBounds = inventorySlot.item.prefab.GetComponent<MeshRenderer>().bounds;
 
             _centerPoint = tankBounds.center +
@@ -607,10 +624,19 @@ namespace Display
                 _ => 1
             };
 
-            inventorySlot.item.prefab.transform.localScale =
-            new Vector3(Random.Range(activeTankObject.decorScaleMin, activeTankObject.decorScaleMax),
-                        y,
-                        Random.Range(activeTankObject.decorScaleMin, activeTankObject.decorScaleMax));
+            if (inventorySlot.item.tag.Equals("Cave") && activeTankObject.prefab.name.Contains("R"))
+            {
+                inventorySlot.item.prefab.transform.localScale =
+                    new Vector3(1.2f, 1.2f, 1.2f);
+            }
+            else
+            {
+                inventorySlot.item.prefab.transform.localScale =
+                            new Vector3(Random.Range(activeTankObject.decorScaleMin, activeTankObject.decorScaleMax),
+                                        y,
+                                        Random.Range(activeTankObject.decorScaleMin, activeTankObject.decorScaleMax));
+            }
+            
         }
         /// <summary>
         /// Resets the localScale of the prefab to (1,1,1) and the Rotation to (0,0,0).

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4837820154039957960}
   - component: {fileID: 8398290098047284845}
   - component: {fileID: 6010140636971860647}
-  - component: {fileID: 2550173880775326060}
+  - component: {fileID: 6547250551918168135}
   m_Layer: 0
   m_Name: Cave_Prefab
   m_TagString: Cave
@@ -82,8 +82,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2550173880775326060
-BoxCollider:
+--- !u!64 &6547250551918168135
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,6 +92,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.103126414, y: 0.031142112, z: 0.04278066}
-  m_Center: {x: -0.0000000037252903, y: 0.015571056, z: -0.0000000027939677}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4068373912626513877, guid: b3b94cf2b9836f94ea56dc9ce4415e74, type: 3}
