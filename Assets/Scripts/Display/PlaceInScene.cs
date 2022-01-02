@@ -406,13 +406,13 @@ namespace Display
         {
             bool successful;
             var counter = 0;
-            CalcPosAndRotAndScl(inventorySlot);
+            CalcPRSOnTheFloor(inventorySlot);
             Collider[] results = {new Collider()};
             while (Physics.OverlapBoxNonAlloc(_centerPoint,
                        inventorySlot.item.prefab.GetComponent<MeshRenderer>().bounds.extents, results, _rotation) > 0
                    && counter < 30)
             {
-                CalcPosAndRotAndScl(inventorySlot);
+                CalcPRSOnTheFloor(inventorySlot);
                 counter++;
             }
 
@@ -450,7 +450,8 @@ namespace Display
         /// <summary>
         /// This function is called during initializeAllFish and adding operations.
         /// It is similar to PositionOther the only differences being that the fish is not scaled and spawns around
-        /// the species' centerPoint.
+        /// the species' centerPoint. Differentiates between ancistrus and other fish. Ancistrus does not swarm and
+        /// swims on the ground so special handling is needed.
         /// </summary>
         /// <param name="inventorySlot">Fish to be positioned</param>
         /// <returns>
@@ -463,7 +464,7 @@ namespace Display
             ApplyRandomRotation(inventorySlot);
             if (inventorySlot.item.tag.Contains("Ancistrus"))
             {
-                CalcPosAndRotAndScl(inventorySlot);
+                CalcPRSOnTheFloor(inventorySlot);
             }
             else
             {
@@ -477,7 +478,7 @@ namespace Display
             {
                 if (inventorySlot.item.tag.Contains("Ancistrus"))
                 {
-                    CalcPosAndRotAndScl(inventorySlot);
+                    CalcPRSOnTheFloor(inventorySlot);
                 }
                 else
                 {
@@ -570,10 +571,11 @@ namespace Display
         }
         /// <summary>
         /// This function calls to apply a random rotation and scale to the plants and decor items.
+        /// For the ancistrus only random rotation is applied.
         /// Sets the _centerPoint for the item respecting all bounds.
         /// </summary>
         /// <param name="inventorySlot">Item to be added.</param>
-        private void CalcPosAndRotAndScl(InventorySlot inventorySlot)
+        private void CalcPRSOnTheFloor(InventorySlot inventorySlot)
         {
             var tankBounds = _tankInstance.GetComponent<MeshRenderer>().bounds;
             ApplyRandomRotation(inventorySlot);
@@ -588,7 +590,7 @@ namespace Display
                                Random.Range(
                                    -tankBounds.extents.x * .8f + otherBounds.extents.x,
                                     tankBounds.extents.x * .8f - otherBounds.extents.x),
-                                 -tankBounds.extents.y * .9f,
+                               -tankBounds.extents.y * .9f,
                                Random.Range(
                                    -tankBounds.extents.z * .8f + otherBounds.extents.z,
                                     tankBounds.extents.z * .8f - otherBounds.extents.z)
@@ -612,7 +614,8 @@ namespace Display
         }
         /// <summary>
         /// This function applies a limited random scale (depending on the aquarium's size) to the x and z dimensions
-        /// and a type-specific scale factor to the y dimension. 
+        /// and a type-specific scale factor to the y dimension.
+        /// For the cave item in every rectangular aquarium, a scalefactor of 1.2f is used. 
         /// </summary>
         /// <param name="inventorySlot">Item to be displayed.</param>
         private void ApplyRandomScale(InventorySlot inventorySlot)
