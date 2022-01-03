@@ -37,7 +37,7 @@ namespace Display
         /// <summary>
         /// Dictionary <c>_swarmCenterPoints</c>. Stores the centerSpawnPoints for each fish species with the fish tag as the key.
         /// </summary>
-        private Dictionary<string, Vector3> _swarmCenterPoints;
+        private Dictionary<string, Vector3> _schoolingCenterPoints;
         /// <summary>
         /// List <c>_...InScene</c>. Stores all instances of the specific type for add and remove operations. 
         /// </summary>
@@ -69,7 +69,7 @@ namespace Display
         /// </summary>
         void Start()
         {
-            _swarmCenterPoints = new Dictionary<string, Vector3>();
+            _schoolingCenterPoints = new Dictionary<string, Vector3>();
             _fishInScene = new List<GameObject>();
             _plantsInScene = new List<GameObject>();
             _decorInScene = new List<GameObject>();
@@ -117,7 +117,7 @@ namespace Display
             {
                 if (inventorySlot.amount <= 0 || !FishOkToAdd(inventorySlot)) continue;
                 
-                _swarmCenterPoints.Add(inventorySlot.item.tag, InsideTank(inventorySlot));
+                _schoolingCenterPoints.Add(inventorySlot.item.tag, InsideTank(inventorySlot));
                 var fails = 0;
                 
                 for (var i = 0; i < inventorySlot.amount; i++)
@@ -185,6 +185,12 @@ namespace Display
         /// A fish should only be added to the aquarium if it is not disabled. (Checked in FishOkToAdd)
         /// If the fish is allowed to be added it is checked if the dictionary already contains this fish species.
         /// Then PositionFish is called which tries to add the fish in the aquarium.
+        /// If there the fish we are trying to place is a schooling fish and it is the first of its kind to be set,
+        /// its minimum count is used and as many instances set.
+        /// E.g. a discus should be placed in a group of at least 8 fish. But as it is quite large there might not be
+        /// enough room for all 8 to spawn. So there is a counter which tracks how often the placing operation succedeed
+        /// and sets the displays number accordingly.
+        /// If the amount != 0 one fish is placed as usual.
         /// For plants or decor items PositionOther is called.
         /// </summary>
         /// <param name="inventorySlot">InventorySlot upon which add was called. Possible: fish, plant or decor.</param>
@@ -240,20 +246,22 @@ namespace Display
         /// <param name="inventorySlot">Stores which fish and how often it should be added.</param>
         private void CheckIfDictionaryContainsFish(InventorySlot inventorySlot)
         {
-            if(!_swarmCenterPoints.ContainsKey(inventorySlot.item.tag))
-                _swarmCenterPoints.Add(inventorySlot.item.tag, InsideTank(inventorySlot));
+            if(!_schoolingCenterPoints.ContainsKey(inventorySlot.item.tag))
+                _schoolingCenterPoints.Add(inventorySlot.item.tag, InsideTank(inventorySlot));
         }
 
         /// <summary>
         /// This function is called whenever the user clicks minus on a fish, plant or decor item in the UI.
-        /// For fish, plant and decor item the operation is basically the same but other lists have to be used.
-        /// First of all the list which stores all the instances is reversed. This way we can remove the items backwards
-        /// of how we placed them and not it the same order. So the last item we placed will be removed first.
-        /// We iterate through the list until we find a instance with a tag that equals the tag we are searching.  
+        /// For fish, plant and decor item the operation is basically the same but other lists have to be used and the
+        /// AddOrRemoveAmount function has to be executed on different inventories.
         /// Having found the correct one it is removed from the list and the instance is destoryed.
-        /// Lastly we reverse the list again so that we won't run into problems when adding new items.
+        /// For the fish, if we reach the minimum value or less all remaining instances are removed from the
+        /// _fishInScene list, destroyed and the removed amount is subtracted.
+        /// For the normal remove operation, the list which stores all the instances is reversed. This way we can remove
+        /// the items backwards of how we placed them and not it the same order. So the last item we placed will be
+        /// removed first. We iterate through the list until we find an instance with a tag that equals the tag we are
+        /// searching. Lastly we reverse the list again so that we won't run into problems when adding new items.
         /// For plants and decor items the same is done.
-        /// TODO Auslagern
         /// </summary>
         /// <param name="inventorySlot">InventorySlot upon which remove was called. Possible: fish, plant or decor</param>
         public void RemoveExistingOther(InventorySlot inventorySlot)
@@ -262,24 +270,23 @@ namespace Display
             {
                 case ItemType.Fish:
                 {
-                    _fishInScene.Reverse();
-                    if (inventorySlot.amount == ((FishObject)inventorySlot.item).minCount)
+                    if (inventorySlot.amount <= ((FishObject)inventorySlot.item).minCount)
                     {
-                        for (int i = 0; i < ((FishObject)inventorySlot.item).minCount; i++)
+                        var fishInstances = GameObject.FindGameObjectsWithTag(inventorySlot.item.tag);
+                        foreach (var instance in fishInstances)
                         {
-                            foreach (var fishInstance in _fishInScene)
-                            {
-                                if (!fishInstance.tag.Equals(inventorySlot.item.tag)) continue;
-                            
-                                _fishInScene.Remove(fishInstance);
-                                Destroy(fishInstance);
-                                break;
-                            }
+                            _fishInScene.Remove(instance);
+                            Destroy(instance);
                         }
-                        player.GetComponent<Player>().fishInventory.AddOrRemoveAmount(inventorySlot, 1, ((FishObject)inventorySlot.item).minCount);
+                        
+                        player.GetComponent<Player>().fishInventory.AddOrRemoveAmount(
+                            inventorySlot,
+                            1,
+                            fishInstances.Length);
                     }
                     else
                     {
+                        _fishInScene.Reverse();
                         foreach (var fishInstance in _fishInScene)
                         {
                             if (!fishInstance.tag.Equals(inventorySlot.item.tag)) continue;
@@ -289,8 +296,8 @@ namespace Display
                             Destroy(fishInstance);
                             break;
                         }
+                        _fishInScene.Reverse();
                     }
-                    _fishInScene.Reverse();
                     break;
                 }
                 case ItemType.Plant:
@@ -336,7 +343,7 @@ namespace Display
             Destroy(_tankInstance);
             activeTankObject = null;
 
-            _swarmCenterPoints.Clear();
+            _schoolingCenterPoints.Clear();
             _fishInScene.Clear();
             _plantsInScene.Clear();
             _decorInScene.Clear();
@@ -355,6 +362,8 @@ namespace Display
         /// The greatestExtend ("1/2 longest Side") of the fish is calculated in CalculateGreatestExtend and
         /// multiplied with 4 to have twice the longest side. The greatestExtend will be used to calculate the spwan
         /// radius in which the fish can be spawned.
+        /// For the discus an extra case was construced as it is quite large and otherwise there might be problems when
+        /// placing the discus due to missing space. So its spawncircle is larger than it would have to be.
         /// The idea is that the spawn radius is dependent on the amount of fish from that species. So for the first
         /// fish the radius could be quite small and for every added fish it will grow. The problem is if the
         /// centerPoint of the spawnCircle is set near the glass fronts. Then there would not be enough space for the
@@ -442,7 +451,8 @@ namespace Display
         /// This function is called during initializeAll plants and decor, and adding operations.
         /// It tries to position plants or decor items. First of all, the item is randomly positioned on the floor,
         /// rotated and scaled. Afterwards its collider is used to check if the item is placed without collisions.
-        /// If so, the item is instantiated, added to the _...InScene list and the prefab's random scale is reset.
+        /// If so, the item is instantiated, added to the _...InScene list, the amount in the inventory is counted
+        /// up, and the prefab's random scale is reset.
         /// On the other hand if a collision was detected and the counter is less than 30 a new position, rotation
         /// and scale is calculated. Once the counter reaches 30 a normally hidden error text is activated on the UI
         /// and informes the user that the item could not be added due to missing space.
@@ -602,7 +612,7 @@ namespace Display
             {
                 RecalculateSpawnRadii(inventorySlot);
             }
-            var position = _swarmCenterPoints[inventorySlot.item.tag] + 
+            var position = _schoolingCenterPoints[inventorySlot.item.tag] + 
                            Random.insideUnitSphere * _innerCircle;
             _centerPoint = position;
         }

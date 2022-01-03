@@ -20,10 +20,10 @@ MonoBehaviour:
     amount: 10
     isActive: 1
   - item: {fileID: 11400000, guid: 603ec826f3a98b144af046f1730ac06f, type: 2}
-    amount: 0
+    amount: 10
     isActive: 1
   - item: {fileID: 11400000, guid: 01df755a53624bd4d8a5c2ffd5247b50, type: 2}
-    amount: 0
+    amount: 4
     isActive: 1
   - item: {fileID: 11400000, guid: 01f47cced8877384288f53a7befb2432, type: 2}
     amount: 2
@@ -35,13 +35,13 @@ MonoBehaviour:
     amount: 0
     isActive: 1
   - item: {fileID: 11400000, guid: 74ccb2c8287d54d49a999f7be01618c3, type: 2}
-    amount: 0
+    amount: 10
     isActive: 1
   - item: {fileID: 11400000, guid: b923a791ce3ef3445b2a0873e966b976, type: 2}
-    amount: 0
+    amount: 10
     isActive: 1
   - item: {fileID: 11400000, guid: dd60f313a33d7134b82b49a049763a49, type: 2}
-    amount: 0
+    amount: 10
     isActive: 1
   - item: {fileID: 11400000, guid: 46eb8e5da6859cc47a417bbbbd51c4e5, type: 2}
     amount: 11
