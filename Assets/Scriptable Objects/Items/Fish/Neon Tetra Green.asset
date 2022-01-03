@@ -57,3 +57,4 @@ MonoBehaviour:
   biologicalName: Microdevario kubotai
   species: Paracheirodon
   length: 3.5 - 4 cm
+  minCount: 10

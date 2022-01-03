@@ -45,3 +45,4 @@ MonoBehaviour:
   biologicalName: Misgurnus anguillicaudatus
   species: Schlammpeitzger
   length: 28 cm
+  minCount: 2

@@ -71,3 +71,4 @@ MonoBehaviour:
   biologicalName: Symphysodon
   species: Diskusfische
   length: 15 - 20 cm
+  minCount: 8

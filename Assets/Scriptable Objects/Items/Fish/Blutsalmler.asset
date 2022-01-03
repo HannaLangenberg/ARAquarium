@@ -67,3 +67,4 @@ MonoBehaviour:
   biologicalName: Hyphessobrycon eques
   species: 'Blutsalmler '
   length: 3 cm
+  minCount: 10

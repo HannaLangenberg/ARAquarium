@@ -43,3 +43,4 @@ MonoBehaviour:
   biologicalName: Hypancistrus spec.
   species: Ancistrus
   length: 10 cm
+  minCount: 1

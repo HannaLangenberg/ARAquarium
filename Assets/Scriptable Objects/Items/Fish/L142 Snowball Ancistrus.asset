@@ -53,3 +53,4 @@ MonoBehaviour:
   biologicalName: Peckoltia sabaji
   species: Ancistrus
   length: 10 cm
+  minCount: 1

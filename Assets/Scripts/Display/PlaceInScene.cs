@@ -119,6 +119,7 @@ namespace Display
                 
                 _swarmCenterPoints.Add(inventorySlot.item.tag, InsideTank(inventorySlot));
                 var fails = 0;
+                
                 for (var i = 0; i < inventorySlot.amount; i++)
                 {
                     if (!PositionFish(inventorySlot))
@@ -126,6 +127,7 @@ namespace Display
                         fails++;
                     }
                 }
+
                 inventorySlot.amount -= fails;
             }
         }
@@ -198,7 +200,25 @@ namespace Display
                     return false;
                 case ItemType.Fish:
                     CheckIfDictionaryContainsFish(inventorySlot);
-                    return PositionFish(inventorySlot);
+                    bool success;
+                    if (inventorySlot.amount == 0)
+                    {
+                        for (var i = 0; i < ((FishObject)inventorySlot.item).minCount; i++)
+                        {
+                            var added = 0;
+                            if (PositionFish(inventorySlot))
+                                added++;
+                            else
+                                added--;
+                            inventorySlot.amount += added;
+                        }
+                        success = true;
+                    }
+                    else
+                    {
+                        success = PositionFish(inventorySlot);
+                    }
+                    return success;
                 case ItemType.Plant:
                 case ItemType.Decor:
                     return PositionOther(inventorySlot);
@@ -340,6 +360,11 @@ namespace Display
             {
                 _maxSpawnRadius = greatestExtend * 4;
                 _innerCircle = greatestExtend * 2;
+            }
+            else if (inventorySlot.amount == 0 && inventorySlot.item.tag.Equals("Discus"))
+            {
+                _maxSpawnRadius = greatestExtend * (((FishObject)inventorySlot.item).minCount + 2);
+                _innerCircle = greatestExtend * ((FishObject)inventorySlot.item).minCount;
             }
             else
             {

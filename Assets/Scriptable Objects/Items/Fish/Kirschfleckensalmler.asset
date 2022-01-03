@@ -67,3 +67,4 @@ MonoBehaviour:
   biologicalName: Hyphessobrycon erythrostigma
   species: Kirschfleckensalmler
   length: 3 cm
+  minCount: 10

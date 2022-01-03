@@ -56,3 +56,4 @@ MonoBehaviour:
   biologicalName: Hemigrammus erythrozonus
   species: "Gl\xFChlichtsalmler"
   length: 3 cm
+  minCount: 10

@@ -8,6 +8,7 @@ namespace Scriptable_Objects.Items.Scripts
         public string biologicalName;
         public string species;
         public string length;
+        public int minCount;
 
         public void Awake()
         {

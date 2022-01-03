@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 184824597119140821}
   m_Layer: 0
   m_Name: L142_Snowball_Ancistrus_Prefab
-  m_TagString: Untagged
+  m_TagString: L142 Snowball Ancistrus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5932630361057745717}
-  m_LocalRotation: {x: 0, y: 0.052335963, z: 0, w: 0.9986295}
+  m_LocalRotation: {x: 0, y: 0.04361939, z: 0, w: 0.99904823}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []

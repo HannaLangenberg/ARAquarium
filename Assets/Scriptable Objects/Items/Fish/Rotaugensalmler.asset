@@ -22,3 +22,4 @@ MonoBehaviour:
   biologicalName: Hemigrammus bellottii
   species: Bellotti-Rotaugensalmler
   length: 3 cm
+  minCount: 10

@@ -40,12 +40,12 @@ namespace Scriptable_Objects.Inventory.Scripts
             switch (decision)
             {
                 case 0:
-                    inventorySlot.AddAmount(1);
+                    inventorySlot.AddAmount();
                     break;
                 case 1:
                     if (inventorySlot.amount > 0)
                     {
-                        inventorySlot.RemoveAmount(1);
+                        inventorySlot.RemoveAmount();
                     }
 
                     break;
@@ -87,14 +87,17 @@ namespace Scriptable_Objects.Inventory.Scripts
             isActive = true;
         }
 
-        public void AddAmount(int value)
+        public void AddAmount()
         {
-            amount += value;
+            if (amount > ((FishObject) item).minCount)
+            {
+                amount++;
+            }
         }
 
-        public void RemoveAmount(int value)
+        public void RemoveAmount()
         {
-            amount -= value;
+            amount--;
         }
     }
 }

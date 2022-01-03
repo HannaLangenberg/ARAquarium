@@ -62,3 +62,4 @@ MonoBehaviour:
   biologicalName: Hyphessobrycon pulchripinnis
   species: Zitronensalmler
   length: 3 cm
+  minCount: 10
