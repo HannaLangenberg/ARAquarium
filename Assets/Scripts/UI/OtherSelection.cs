@@ -156,7 +156,7 @@ namespace UI
         {
             if (GetComponent<PlaceInScene>().AddNewOther(activeInventorySlot))
             {
-                inventoryToDisplay.AddOrRemoveAmount(activeInventorySlot.item, 0);
+                // inventoryToDisplay.AddOrRemoveAmount(activeInventorySlot, 0, 1);
                 amountText.text = activeInventorySlot.amount.ToString();
                 detailsComponent.amountText.text = activeInventorySlot.amount.ToString();
                 RefreshSelectionUI();
@@ -171,9 +171,9 @@ namespace UI
      */
         public void Remove()
         {
-            inventoryToDisplay.AddOrRemoveAmount(activeInventorySlot.item, 1);
-            amountText.text = activeInventorySlot.amount.ToString();
             GetComponent<PlaceInScene>().RemoveExistingOther(activeInventorySlot);
+            // inventoryToDisplay.AddOrRemoveAmount(activeInventorySlot, 1, 1);
+            amountText.text = activeInventorySlot.amount.ToString();
             detailsComponent.amountText.text = activeInventorySlot.amount.ToString();
             RefreshSelectionUI();
         }

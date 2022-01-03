@@ -131,32 +131,6 @@ namespace UI
             }
         }
 
-        /**
-     * Function attached to Plus button on DetailsPanel. Forwards add operation to class intern function of
-     * InventoryObject. Uses the returned InventorySlot to display the changes. Lastly refreshes UI.
-     * Decision variable 0 → add
-     */
-        public void Add(ItemObject itemObject)
-        {
-            InventorySlot iSlot = inventoryToDisplay.AddOrRemoveAmount(itemObject, 0);
-
-            detailsComponent.amountText.text = iSlot.amount.ToString();
-            RefreshSelectionUI();
-        }
-
-        /**
-     * Function attached to Minus button on DetailsPanel. Forwards add operation to class intern function of
-     * InventoryObject. Uses the returned InventorySlot to display the changes. Lastly refreshes UI.
-     * Decision variable 1 → remove
-     */
-        public void Remove(ItemObject itemObject)
-        {
-            InventorySlot iSlot = inventoryToDisplay.AddOrRemoveAmount(itemObject, 1);
-
-            detailsComponent.amountText.text = iSlot.amount.ToString();
-            RefreshSelectionUI();
-        }
-
         public void UpdateChanges()
         {
             Start();

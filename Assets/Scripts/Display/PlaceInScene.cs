@@ -208,15 +208,19 @@ namespace Display
                             var added = 0;
                             if (PositionFish(inventorySlot))
                                 added++;
-                            else
-                                added--;
-                            inventorySlot.amount += added;
+                            player.GetComponent<Player>().fishInventory.AddOrRemoveAmount(inventorySlot, 0, added);
                         }
                         success = true;
                     }
                     else
                     {
-                        success = PositionFish(inventorySlot);
+                        if (PositionFish(inventorySlot))
+                        {
+                            player.GetComponent<Player>().fishInventory.AddOrRemoveAmount(inventorySlot, 0, 1);
+                            success = true;
+                        }
+                        else
+                            success = false;
                     }
                     return success;
                 case ItemType.Plant:
@@ -259,13 +263,32 @@ namespace Display
                 case ItemType.Fish:
                 {
                     _fishInScene.Reverse();
-                    foreach (var fishInstance in _fishInScene)
+                    if (inventorySlot.amount == ((FishObject)inventorySlot.item).minCount)
                     {
-                        if (!fishInstance.tag.Equals(inventorySlot.item.tag)) continue;
-                        
-                        _fishInScene.Remove(fishInstance);
-                        Destroy(fishInstance);
-                        break;
+                        for (int i = 0; i < ((FishObject)inventorySlot.item).minCount; i++)
+                        {
+                            foreach (var fishInstance in _fishInScene)
+                            {
+                                if (!fishInstance.tag.Equals(inventorySlot.item.tag)) continue;
+                            
+                                _fishInScene.Remove(fishInstance);
+                                Destroy(fishInstance);
+                                break;
+                            }
+                        }
+                        player.GetComponent<Player>().fishInventory.AddOrRemoveAmount(inventorySlot, 1, ((FishObject)inventorySlot.item).minCount);
+                    }
+                    else
+                    {
+                        foreach (var fishInstance in _fishInScene)
+                        {
+                            if (!fishInstance.tag.Equals(inventorySlot.item.tag)) continue;
+                            
+                            _fishInScene.Remove(fishInstance);
+                            player.GetComponent<Player>().fishInventory.AddOrRemoveAmount(inventorySlot, 1, 1);
+                            Destroy(fishInstance);
+                            break;
+                        }
                     }
                     _fishInScene.Reverse();
                     break;
@@ -279,6 +302,7 @@ namespace Display
                         
                         _plantsInScene.Remove(plantInstance);
                         Destroy(plantInstance);
+                        player.GetComponent<Player>().plantInventory.AddOrRemoveAmount(inventorySlot, 1, 1);
                         break;
                     }
                     _plantsInScene.Reverse();
@@ -293,6 +317,7 @@ namespace Display
                         
                         _decorInScene.Remove(decorInstance);
                         Destroy(decorInstance);
+                        player.GetComponent<Player>().decorInventory.AddOrRemoveAmount(inventorySlot, 1, 1);
                         break;
                     }
                     _decorInScene.Reverse();
@@ -458,12 +483,14 @@ namespace Display
                         _plantInstance = Instantiate(inventorySlot.item.prefab, _centerPoint, _rotation,
                             _tankInstance.transform);
                         _plantsInScene.Add(_plantInstance);
+                        player.GetComponent<Player>().plantInventory.AddOrRemoveAmount(inventorySlot, 0, 1);
                         ResetRandomScaleAndRotation(inventorySlot);
                         break;
                     case ItemType.Decor:
                         _decorInstance = Instantiate(inventorySlot.item.prefab, _centerPoint, _rotation,
                             _tankInstance.transform);
                         _decorInScene.Add(_decorInstance);
+                        player.GetComponent<Player>().decorInventory.AddOrRemoveAmount(inventorySlot, 0, 1);
                         ResetRandomScaleAndRotation(inventorySlot);
                         break;
                 }

@@ -34,23 +34,21 @@ namespace Scriptable_Objects.Inventory.Scripts
             return -1;
         }
 
-        public InventorySlot AddOrRemoveAmount(ItemObject item, int decision)
+        public void AddOrRemoveAmount(InventorySlot inventorySlot, int decision, int count)
         {
-            InventorySlot inventorySlot = Contains(item);
             switch (decision)
             {
                 case 0:
-                    inventorySlot.AddAmount();
+                    inventorySlot.AddAmount(count);
                     break;
                 case 1:
                     if (inventorySlot.amount > 0)
                     {
-                        inventorySlot.RemoveAmount();
+                        inventorySlot.RemoveAmount(count);
                     }
 
                     break;
             }
-            return inventorySlot;
         }
 
         public void ResetAllButActive(InventorySlot inventorySlot)
@@ -87,17 +85,14 @@ namespace Scriptable_Objects.Inventory.Scripts
             isActive = true;
         }
 
-        public void AddAmount()
+        public void AddAmount(int count)
         {
-            if (amount > ((FishObject) item).minCount)
-            {
-                amount++;
-            }
+            amount += count;
         }
 
-        public void RemoveAmount()
+        public void RemoveAmount(int count)
         {
-            amount--;
+            amount -= count;
         }
     }
 }
