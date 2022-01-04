@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using Scriptable_Objects.Inventory.Scripts;
 using Scriptable_Objects.Items.Scripts;
@@ -22,9 +23,13 @@ namespace Display
         /// </summary>
         public GameObject placeholderTankEmpty;
         /// <summary>
-        /// GameObject <c>fail</c>. The Textfield in wich the error message "... could not be added" will be displayed.
+        /// Image <c>error</c>. The image which displays the error message "... could not be added".
         /// </summary>
-        public GameObject fail;
+        public Image error;
+        /// <summary>
+        /// List <c>errorMessages</c>. A list that holds all errorMessages that could occur during placement.
+        /// </summary>
+        public List<Sprite> errorMessages;
         /// <summary>
         /// TankObject <c>activeTankObject</c>. A ScriptableObject TankObject which stores information about the selected aquarium. 
         /// </summary>
@@ -480,9 +485,13 @@ namespace Display
             {
                 Debug.Log(inventorySlot.item.tag + " konnte leider nicht hinzugefügt werden.");
 
-                fail.SetActive(true);
-                fail.GetComponent<Text>().text =
-                    inventorySlot.item.tag + " konnte nicht hinzugefügt werden. Aquarium zu voll.";
+                error.sprite = inventorySlot.item.type.Equals(ItemType.Plant) ? errorMessages[1] : errorMessages[2];
+                if (!error.gameObject.activeSelf)
+                {
+                    error.gameObject.SetActive(true);
+                    StartCoroutine(HideErrorMessage());
+                }
+                
                 successful = false;
             }
             else
@@ -504,11 +513,26 @@ namespace Display
                         ResetRandomScaleAndRotation(inventorySlot);
                         break;
                 }
-                fail.SetActive(false);
+
+                if (error.gameObject.activeSelf)
+                {
+                    error.gameObject.SetActive(false);
+                    StopCoroutine(HideErrorMessage());
+                }
                 successful = true;
             }
             return successful;
         }
+
+        private IEnumerator HideErrorMessage()
+        {
+            while (error.gameObject.activeSelf)
+            {
+                yield return new WaitForSeconds(2f);
+                error.gameObject.SetActive(false);
+            }
+        }
+        
         /// <summary>
         /// This function is called during initializeAllFish and adding operations.
         /// It is similar to PositionOther the only differences being that the fish is not scaled and spawns around
@@ -553,9 +577,13 @@ namespace Display
             {
                 Debug.Log(inventorySlot.item.tag + " konnte leider nicht hinzugefügt werden.");
 
-                fail.SetActive(true);
-                fail.GetComponent<Text>().text =
-                    inventorySlot.item.tag + " konnte nicht hinzugefügt werden. Aquarium zu voll.";
+                error.sprite = errorMessages[0];
+                if (!error.gameObject.activeSelf)
+                {
+                    error.gameObject.SetActive(true);
+                    StartCoroutine(HideErrorMessage());
+                }
+                
                 successful = false;
             }
             else
@@ -563,7 +591,11 @@ namespace Display
                 _fishInstance = Instantiate(inventorySlot.item.prefab, _centerPoint, _rotation,
                                             _tankInstance.transform);
                 _fishInScene.Add(_fishInstance);
-                fail.SetActive(false);
+                if (error.gameObject.activeSelf)
+                {
+                    error.gameObject.SetActive(false);
+                    StopCoroutine(HideErrorMessage());
+                }
                 successful = true;
             }
             return successful;
