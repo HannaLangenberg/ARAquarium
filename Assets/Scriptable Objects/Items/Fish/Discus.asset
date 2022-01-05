@@ -67,7 +67,13 @@ MonoBehaviour:
     Trocken-, Flocken- oder Granulatfutter wird angenommen. Der pflanzliche Anteil
     in ihrer Ern\xE4hrung sollte nicht zu kurz kommen. Vorteilhaft ist eine mehrmalige
     t\xE4gliche sparsame F\xFCtterung.\r"
-  disabledFish: []
+  disabledFish:
+  - {fileID: 11400000, guid: 01df755a53624bd4d8a5c2ffd5247b50, type: 2}
+  disabledFishInventorySlots:
+  - item: {fileID: 11400000, guid: 01df755a53624bd4d8a5c2ffd5247b50, type: 2}
+    amount: 0
+    isActive: 0
+    slotIndex: 3
   biologicalName: Symphysodon
   species: Diskusfische
   length: 15 - 20 cm

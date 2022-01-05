@@ -20,10 +20,31 @@ MonoBehaviour:
   furtherInformation: Nett und loyal.
   disabledFish:
   - {fileID: 11400000, guid: 61c29aca06a5dcf4089dd1ccde07b64a, type: 2}
+  - {fileID: 11400000, guid: 01df755a53624bd4d8a5c2ffd5247b50, type: 2}
   - {fileID: 11400000, guid: 01f47cced8877384288f53a7befb2432, type: 2}
   - {fileID: 11400000, guid: 0f32c344127cf054cbf2a8bddf64e9ba, type: 2}
   - {fileID: 11400000, guid: a8540919c3b178d40887efc47df49347, type: 2}
-  - {fileID: 11400000, guid: 01df755a53624bd4d8a5c2ffd5247b50, type: 2}
+  disabledFishInventorySlots:
+  - item: {fileID: 11400000, guid: 61c29aca06a5dcf4089dd1ccde07b64a, type: 2}
+    amount: 0
+    isActive: 0
+    slotIndex: 0
+  - item: {fileID: 11400000, guid: 01df755a53624bd4d8a5c2ffd5247b50, type: 2}
+    amount: 0
+    isActive: 0
+    slotIndex: 3
+  - item: {fileID: 11400000, guid: 01f47cced8877384288f53a7befb2432, type: 2}
+    amount: 0
+    isActive: 0
+    slotIndex: 4
+  - item: {fileID: 11400000, guid: 0f32c344127cf054cbf2a8bddf64e9ba, type: 2}
+    amount: 0
+    isActive: 0
+    slotIndex: 5
+  - item: {fileID: 11400000, guid: a8540919c3b178d40887efc47df49347, type: 2}
+    amount: 0
+    isActive: 0
+    slotIndex: 6
   width: 30 cm
   height: 30 cm
   depth: 30 cm

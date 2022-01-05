@@ -41,7 +41,13 @@ MonoBehaviour:
     Schlammpeitzger auch in sehr sauerstoffarmen Gew\xE4ssern vorkommt.\r\nMisgurnus
     anguillicaudatus als Wetterfisch: Vor einem Wetterwechsel wird die Art oft unruhig
     und schnappt h\xE4ufig an der Wasseroberfl\xE4che nach Luft.\r"
-  disabledFish: []
+  disabledFish:
+  - {fileID: 11400000, guid: 61c29aca06a5dcf4089dd1ccde07b64a, type: 2}
+  disabledFishInventorySlots:
+  - item: {fileID: 11400000, guid: 61c29aca06a5dcf4089dd1ccde07b64a, type: 2}
+    amount: 0
+    isActive: 0
+    slotIndex: 0
   biologicalName: Misgurnus anguillicaudatus
   species: Schlammpeitzger
   length: 28 cm

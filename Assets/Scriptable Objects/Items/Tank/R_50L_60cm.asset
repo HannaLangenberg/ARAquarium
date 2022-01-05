@@ -21,6 +21,15 @@ MonoBehaviour:
   disabledFish:
   - {fileID: 11400000, guid: 61c29aca06a5dcf4089dd1ccde07b64a, type: 2}
   - {fileID: 11400000, guid: 01df755a53624bd4d8a5c2ffd5247b50, type: 2}
+  disabledFishInventorySlots:
+  - item: {fileID: 11400000, guid: 61c29aca06a5dcf4089dd1ccde07b64a, type: 2}
+    amount: 0
+    isActive: 0
+    slotIndex: 0
+  - item: {fileID: 11400000, guid: 01df755a53624bd4d8a5c2ffd5247b50, type: 2}
+    amount: 0
+    isActive: 0
+    slotIndex: 3
   width: 60 cm
   height: 33 cm
   depth: 33 cm

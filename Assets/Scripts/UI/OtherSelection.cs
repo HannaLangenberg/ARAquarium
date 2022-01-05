@@ -92,7 +92,7 @@ namespace UI
                         GetComponent<Player>().fishInventory.container); 
                     if (index >= 0)
                     {
-                        slotHolder.transform.GetChild(index).GetComponent<Image>().color = Color.gray;
+                        slotHolder.transform.GetChild(index).GetComponent<Image>().color = new Color(.7f, .7f, .7f);
                         GetComponent<Player>().fishInventory.container[index].isActive = false;
                     }
                 }

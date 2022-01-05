@@ -71,12 +71,20 @@ namespace Scriptable_Objects.Inventory.Scripts
         public ItemObject item;
         public int amount;
         public bool isActive;
+        public int slotIndex;
 
         public InventorySlot(ItemObject item, int amount, bool isActive)
         {
             this.item = item;
             this.amount = amount;
             this.isActive = isActive;
+        }
+        public InventorySlot(ItemObject item, int amount, bool isActive, int slotIndex)
+        {
+            this.item = item;
+            this.amount = amount;
+            this.isActive = isActive;
+            this.slotIndex = slotIndex;
         }
         public InventorySlot(ItemObject item, int amount)
         {

@@ -9,7 +9,6 @@ namespace Scriptable_Objects.Items.Scripts
         public string species;
         public string length;
         public int minCount;
-
         public void Awake()
         {
             type = ItemType.Fish;

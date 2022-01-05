@@ -20,6 +20,11 @@ MonoBehaviour:
   furtherInformation: "Kam f\xFCr seine erste Liebe, verlie\xDF mit seiner Wahren."
   disabledFish:
   - {fileID: 11400000, guid: 61c29aca06a5dcf4089dd1ccde07b64a, type: 2}
+  disabledFishInventorySlots:
+  - item: {fileID: 11400000, guid: 61c29aca06a5dcf4089dd1ccde07b64a, type: 2}
+    amount: 0
+    isActive: 0
+    slotIndex: 0
   width: 120 cm
   height: 66 cm
   depth: 66 cm
