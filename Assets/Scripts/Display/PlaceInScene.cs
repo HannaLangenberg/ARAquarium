@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Scriptable_Objects.Inventory.Scripts;
 using Scriptable_Objects.Items.Scripts;
+using UI;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -26,14 +28,19 @@ namespace Display
         /// Image <c>error</c>. The image which displays the error message "... could not be added".
         /// </summary>
         public Image error;
+        public Image diskusWetterschmerle;
         /// <summary>
         /// List <c>errorMessages</c>. A list that holds all errorMessages that could occur during placement.
         /// </summary>
         public List<Sprite> errorMessages;
+        public List<Sprite> informationMessages;
+
         /// <summary>
         /// TankObject <c>activeTankObject</c>. A ScriptableObject TankObject which stores information about the selected aquarium. 
         /// </summary>
         public TankObject activeTankObject;
+
+        public InventorySlot activeTankInventorySlot;
         
         /// <summary>
         /// GameObject <c>_...Instance</c>. Temporarily stores the current instance for further manipulation.
@@ -103,6 +110,7 @@ namespace Display
                     Quaternion.identity,
                     placeholderTankEmpty.transform);
                 activeTankObject = inventorySlot.item as TankObject;
+                activeTankInventorySlot = inventorySlot;
             }
         }
 
@@ -147,14 +155,13 @@ namespace Display
             foreach (var inventorySlot in player.GetComponent<Player>().plantInventory.container)
             {
                 var fails = 0;
-                if (inventorySlot.amount > 0)
+                if (inventorySlot.amount <= 0) continue;
+                
+                for (var i = 0; i < inventorySlot.amount; i++)
                 {
-                    for (var i = 0; i < inventorySlot.amount; i++)
+                    if (!PositionOther(inventorySlot))
                     {
-                        if (!PositionOther(inventorySlot))
-                        {
-                            fails++;
-                        }
+                        fails++;
                     }
                 }
                 inventorySlot.amount -= fails;
@@ -170,16 +177,16 @@ namespace Display
             foreach (var inventorySlot in player.GetComponent<Player>().decorInventory.container)
             {
                 var fails = 0;
-                if (inventorySlot.amount > 0)
+                if (inventorySlot.amount <= 0) continue;
+                
+                for (var i = 0; i < inventorySlot.amount; i++)
                 {
-                    for (var i = 0; i < inventorySlot.amount; i++)
+                    if (!PositionOther(inventorySlot))
                     {
-                        if (!PositionOther(inventorySlot))
-                        {
-                            fails++;
-                        }
-                    }
+                        fails++;
+                    }   
                 }
+                
                 inventorySlot.amount -= fails;
             }
         }
@@ -221,6 +228,37 @@ namespace Display
                                 added++;
                             player.GetComponent<Player>().fishInventory.AddOrRemoveAmount(inventorySlot, 0, added);
                         }
+                        
+                        error.gameObject.SetActive(true);
+                        switch (inventorySlot.item.tag)
+                        {
+                            case "Discus":
+                                error.sprite = informationMessages[1];
+                                GetComponent<OtherSelection>().DisableFromFish(inventorySlot);
+                                diskusWetterschmerle.gameObject.SetActive(true);
+                                break;
+                            case "Wetterschmerle":
+                                error.sprite = informationMessages[0];
+                                GetComponent<OtherSelection>().DisableFromFish(inventorySlot);
+                                diskusWetterschmerle.gameObject.SetActive(true);
+                                break;
+                            case "Normal Neon Tetra":
+                            case "Green Neon Tetra":
+                            case "Blutsalmler":
+                            case "Kirschfleckensalmler":
+                            case "Rotaugensalmler":
+                            case "Zitronensalmler":
+                            case "Glühlichtsalmler":
+                                error.sprite = informationMessages[2];
+                                break;
+                            case "L018 Golden Nugget Ancistrus":
+                            case "L173 Zebra Ancistrus":
+                            case "L142 Snowball Ancistrus":
+                                error.gameObject.SetActive(false);
+                                break;
+                        }
+
+                        StartCoroutine(HideErrorMessage(4f));
                         success = true;
                     }
                     else
@@ -235,8 +273,21 @@ namespace Display
                     }
                     return success;
                 case ItemType.Plant:
+                    if (PositionOther(inventorySlot))
+                    {
+                        player.GetComponent<Player>().plantInventory.AddOrRemoveAmount(inventorySlot, 0, 1);
+                        return true;
+                    }
+                    else
+                        return false;
                 case ItemType.Decor:
-                    return PositionOther(inventorySlot);
+                    if (PositionOther(inventorySlot))
+                    {
+                        player.GetComponent<Player>().decorInventory.AddOrRemoveAmount(inventorySlot, 0, 1);
+                        return true;
+                    }
+                    else
+                        return false;
                 default:
                     return false;
             }
@@ -347,7 +398,7 @@ namespace Display
         {
             Destroy(_tankInstance);
             activeTankObject = null;
-
+            activeTankInventorySlot = null;
             _schoolingCenterPoints.Clear();
             _fishInScene.Clear();
             _plantsInScene.Clear();
@@ -489,7 +540,7 @@ namespace Display
                 if (!error.gameObject.activeSelf)
                 {
                     error.gameObject.SetActive(true);
-                    StartCoroutine(HideErrorMessage());
+                    StartCoroutine(HideErrorMessage(2f));
                 }
                 
                 successful = false;
@@ -502,14 +553,12 @@ namespace Display
                         _plantInstance = Instantiate(inventorySlot.item.prefab, _centerPoint, _rotation,
                             _tankInstance.transform);
                         _plantsInScene.Add(_plantInstance);
-                        player.GetComponent<Player>().plantInventory.AddOrRemoveAmount(inventorySlot, 0, 1);
                         ResetRandomScaleAndRotation(inventorySlot);
                         break;
                     case ItemType.Decor:
                         _decorInstance = Instantiate(inventorySlot.item.prefab, _centerPoint, _rotation,
                             _tankInstance.transform);
                         _decorInScene.Add(_decorInstance);
-                        player.GetComponent<Player>().decorInventory.AddOrRemoveAmount(inventorySlot, 0, 1);
                         ResetRandomScaleAndRotation(inventorySlot);
                         break;
                 }
@@ -517,19 +566,23 @@ namespace Display
                 if (error.gameObject.activeSelf)
                 {
                     error.gameObject.SetActive(false);
-                    StopCoroutine(HideErrorMessage());
+                    StopCoroutine(HideErrorMessage(2f));
                 }
                 successful = true;
             }
             return successful;
         }
 
-        private IEnumerator HideErrorMessage()
+        private IEnumerator HideErrorMessage(float duration)
         {
             while (error.gameObject.activeSelf)
             {
-                yield return new WaitForSeconds(2f);
+                yield return new WaitForSeconds(duration);
                 error.gameObject.SetActive(false);
+                if (diskusWetterschmerle.gameObject.activeSelf)
+                {
+                    diskusWetterschmerle.gameObject.SetActive(false);
+                }
             }
         }
         
@@ -581,7 +634,7 @@ namespace Display
                 if (!error.gameObject.activeSelf)
                 {
                     error.gameObject.SetActive(true);
-                    StartCoroutine(HideErrorMessage());
+                    StartCoroutine(HideErrorMessage(2f));
                 }
                 
                 successful = false;
@@ -594,7 +647,7 @@ namespace Display
                 if (error.gameObject.activeSelf)
                 {
                     error.gameObject.SetActive(false);
-                    StopCoroutine(HideErrorMessage());
+                    StopCoroutine(HideErrorMessage(2f));
                 }
                 successful = true;
             }

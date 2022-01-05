@@ -117,7 +117,8 @@ namespace UI
             {
                 _slots[i].transform.GetChild(0).GetComponent<Image>().enabled = true;
                 _slots[i].transform.GetChild(0).GetComponent<Image>().sprite = _items[i].item.thumbnail;
-                _slots[i].transform.GetChild(1).GetComponent<Text>().text = "";
+                _slots[i].transform.GetChild(1).GetComponent<Text>().text = ((TankObject) _items[i].item).volume;
+
                 if (_items[i].amount == 1)
                 {
                     // _slots[i].GetComponent<Image>().color = activeColor;

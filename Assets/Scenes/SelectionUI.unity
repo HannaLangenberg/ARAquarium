@@ -5244,6 +5244,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803145538}
   m_CullTransparentMesh: 1
+--- !u!1 &803466423
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 803466424}
+  - component: {fileID: 803466426}
+  - component: {fileID: 803466425}
+  m_Layer: 5
+  m_Name: DiskusUndWetterschmerle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &803466424
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803466423}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1281406750}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 109.78, y: 388}
+  m_SizeDelta: {x: 2054.3018, y: 172.24}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &803466425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803466423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 6b095d5e3f749264084d73c36e15006a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &803466426
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803466423}
+  m_CullTransparentMesh: 1
 --- !u!1 &811291092
 GameObject:
   m_ObjectHideFlags: 0
@@ -9081,6 +9156,7 @@ RectTransform:
   - {fileID: 2035348755}
   - {fileID: 1307557409}
   - {fileID: 2086349638}
+  - {fileID: 803466424}
   m_Father: {fileID: 1787520784}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15101,6 +15177,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotHolder: {fileID: 1494705805}
+  activeColor: {r: 0, g: 0, b: 0, a: 0}
+  inactiveColor: {r: 0, g: 0, b: 0, a: 0}
   activeImage: {fileID: 21300000, guid: 7c659feb297502f42bd4c3e29452edc1, type: 3}
   inactiveImage: {fileID: 21300000, guid: 4a9865dc16721624e9106beab7582e5e, type: 3}
   inventoryToDisplay: {fileID: 11400000, guid: 8af7765b617d9114dbf3f50dddc3d250, type: 2}
@@ -15127,10 +15205,15 @@ MonoBehaviour:
   player: {fileID: 2037101247}
   placeholderTankEmpty: {fileID: 758900700}
   error: {fileID: 2086349639}
+  diskusWetterschmerle: {fileID: 803466425}
   errorMessages:
   - {fileID: 21300000, guid: a241f546b851da64ba064714a9ed4d99, type: 3}
   - {fileID: 21300000, guid: 60e9fb38c91e63a4aa40e08d42897546, type: 3}
   - {fileID: 21300000, guid: a43abe67f1fbeae4a9c5408cd7ef9921, type: 3}
+  informationMessages:
+  - {fileID: 21300000, guid: f166249c22fa6eb4996a0480add3f47a, type: 3}
+  - {fileID: 21300000, guid: a71a9c8cad0018f439ca60389b72e252, type: 3}
+  - {fileID: 21300000, guid: 9c366e0a87331864cb1f62080ccb9ac4, type: 3}
   activeTankObject: {fileID: 0}
   activeTankInventorySlot:
     item: {fileID: 0}
@@ -15161,7 +15244,7 @@ GameObject:
   - component: {fileID: 2086349640}
   - component: {fileID: 2086349639}
   m_Layer: 5
-  m_Name: Error
+  m_Name: Meldung
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -72,7 +72,9 @@ namespace UI
             }
             RefreshSelectionUI();
             
-            CheckToDisable();
+            // CheckToDisable();
+            // Disable();
+            DisableFromFish(GetComponent<PlaceInScene>().activeTankInventorySlot);
         }
 
         private void DisableControls()
@@ -80,22 +82,57 @@ namespace UI
             controls.SetActive(false);
         }
 
-        private void CheckToDisable()
+        /*private void CheckToDisable()
         {
-            if (inventoryToDisplay.Equals(GetComponent<Player>().fishInventory))
-            {
-                TankObject selectedTank = GetComponent<PlaceInScene>().activeTankObject;
+            if (!inventoryToDisplay.Equals(GetComponent<Player>().fishInventory)) return;
+            
+            TankObject selectedTank = GetComponent<PlaceInScene>().activeTankObject;
                 
-                foreach (FishObject fishObject in selectedTank.disabledFish)
+            foreach (FishObject fishObject in selectedTank.disabledFish)
+            {
+                int index = GetComponent<Player>().fishInventory.Contains(fishObject,
+                    GetComponent<Player>().fishInventory.container); 
+                if (index >= 0)
                 {
-                    int index = GetComponent<Player>().fishInventory.Contains(fishObject,
-                        GetComponent<Player>().fishInventory.container); 
-                    if (index >= 0)
-                    {
-                        slotHolder.transform.GetChild(index).GetComponent<Image>().color = new Color(.7f, .7f, .7f);
-                        GetComponent<Player>().fishInventory.container[index].isActive = false;
-                    }
+                    slotHolder.transform.GetChild(index).GetComponent<Image>().color = new Color(.7f, .7f, .7f);
+                    GetComponent<Player>().fishInventory.container[index].isActive = false;
                 }
+            }
+        }*/
+
+        public void Disable()
+        {
+            if (!inventoryToDisplay.Equals(GetComponent<Player>().fishInventory)) return;
+
+            var inventorySlot = GetComponent<PlaceInScene>().activeTankInventorySlot;
+
+            foreach (var disabledSlot in inventorySlot.item.disabledFishInventorySlots)
+            {
+                slotHolder.transform.GetChild(disabledSlot.slotIndex).GetComponent<Image>().color = new Color(.7f, .7f, .7f);
+                GetComponent<Player>().fishInventory.container[disabledSlot.slotIndex].isActive = false;
+            }
+        }
+
+
+        public void DisableFromFish(InventorySlot inventorySlot)
+        {
+            if (!inventoryToDisplay.Equals(GetComponent<Player>().fishInventory)) return;
+
+            foreach (var disabledSlot in inventorySlot.item.disabledFishInventorySlots)
+            {
+                slotHolder.transform.GetChild(disabledSlot.slotIndex).GetComponent<Image>().color = new Color(.7f, .7f, .7f);
+                GetComponent<Player>().fishInventory.container[disabledSlot.slotIndex].isActive = false;
+            }
+        }
+
+        public void EnableFromFish(InventorySlot inventorySlot)
+        {
+            if (!inventoryToDisplay.Equals(GetComponent<Player>().fishInventory)) return;
+
+            foreach (var disabledSlot in inventorySlot.item.disabledFishInventorySlots)
+            {
+                slotHolder.transform.GetChild(disabledSlot.slotIndex).GetComponent<Image>().color = Color.white;
+                GetComponent<Player>().fishInventory.container[disabledSlot.slotIndex].isActive = true;
             }
         }
 
@@ -158,6 +195,13 @@ namespace UI
             {
                 amountText.text = activeInventorySlot.amount.ToString();
                 detailsComponent.amountText.text = activeInventorySlot.amount.ToString();
+
+                /*if (activeInventorySlot.item.tag.Equals("Discus") || activeInventorySlot.item.tag.Equals("Wetterschmerle"))
+                {
+                    DisableFromFish(activeInventorySlot);
+                    GetComponent<PlaceInScene>().diskusWetterschmerle.gameObject.SetActive(true);
+                }*/
+                
                 RefreshSelectionUI();
             }
         }
@@ -173,6 +217,14 @@ namespace UI
             GetComponent<PlaceInScene>().RemoveExistingOther(activeInventorySlot);
             amountText.text = activeInventorySlot.amount.ToString();
             detailsComponent.amountText.text = activeInventorySlot.amount.ToString();
+            
+            if ((activeInventorySlot.item.tag.Equals("Discus")
+                 || activeInventorySlot.item.tag.Equals("Wetterschmerle"))
+                && ! (activeInventorySlot.amount > 0))
+            {
+                EnableFromFish(activeInventorySlot);
+            }
+            
             RefreshSelectionUI();
         }
 
@@ -190,6 +242,7 @@ namespace UI
                 _slots[i].transform.GetChild(0).GetComponent<Image>().enabled = true;
                 _slots[i].transform.GetChild(0).GetComponent<Image>().sprite = _items[i].item.thumbnail;
                 _slots[i].transform.GetChild(1).GetComponent<Text>().text = _items[i].amount.ToString();
+                
             }
         }
         

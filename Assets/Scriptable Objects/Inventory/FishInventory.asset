@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   container:
   - item: {fileID: 11400000, guid: 61c29aca06a5dcf4089dd1ccde07b64a, type: 2}
-    amount: 8
+    amount: 0
     isActive: 1
     slotIndex: 0
   - item: {fileID: 11400000, guid: debd6fc5bfd73ca439b2196c7d726e21, type: 2}
@@ -27,7 +27,7 @@ MonoBehaviour:
     slotIndex: 2
   - item: {fileID: 11400000, guid: 01df755a53624bd4d8a5c2ffd5247b50, type: 2}
     amount: 0
-    isActive: 1
+    isActive: 0
     slotIndex: 3
   - item: {fileID: 11400000, guid: 01f47cced8877384288f53a7befb2432, type: 2}
     amount: 0
@@ -58,6 +58,6 @@ MonoBehaviour:
     isActive: 1
     slotIndex: 10
   - item: {fileID: 11400000, guid: 7c2e72baadcf607469e1d67d549be13f, type: 2}
-    amount: 0
+    amount: 10
     isActive: 1
     slotIndex: 11
