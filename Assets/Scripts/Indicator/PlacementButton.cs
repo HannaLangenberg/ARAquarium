@@ -24,6 +24,7 @@ namespace Indicator
         {
             _keepMeARSessionOrigin = GameObject.Find("AR Session Origin");
             _keepMeARSessionOrigin.GetComponentInChildren<ARPoseDriver>().enabled = true;
+            _keepMeARSessionOrigin.transform.localScale = Vector3.one;
             _keepMe = _keepMeARSessionOrigin.GetComponent<KeepMe>();
             _aRraycastManager = FindObjectOfType<ARRaycastManager>();
             

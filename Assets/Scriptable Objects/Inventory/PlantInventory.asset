@@ -14,6 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   container:
   - item: {fileID: 11400000, guid: 0021e55ebcccf6445bcf0e4d6dc0862e, type: 2}
-    amount: 1
+    amount: 0
     isActive: 1
     slotIndex: 0
+  - item: {fileID: 11400000, guid: a762dd3fbf2ba784bbbfe398a6e9e7ac, type: 2}
+    amount: 0
+    isActive: 1
+    slotIndex: 1

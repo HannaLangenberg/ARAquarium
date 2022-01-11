@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297272590a381a245881a42201239468, type: 3}
+  m_Name: Wasserpest
+  m_EditorClassIdentifier: 
+  tag: Wasserpest
+  name: Wasserpest
+  thumbnail: {fileID: 21300000, guid: 13861fd3e1ec00d44b7350d08886a136, type: 3}
+  prefab: {fileID: 5155767515403875037, guid: 3598cf4b4629d3f4b98b28941891f923, type: 3}
+  type: 2
+  furtherInformation: "Die Dichtbl\xE4ttrige Wasserpest ist wohl die bekannteste
+    Wasserpflanze sowohl in der Aquaristik und auch im Gartenteich. Egeria densa,
+    die manchmal auch Elodea densa genannt wird, ist robust und sehr einfach in der
+    Pflege. Sie ist sehr gut f\xFCr Anf\xE4nger geeignet und fast unverw\xFCstlich.\r\nDie
+    auf allen Kontinenten beheimatete Egeria densa geh\xF6rt der Familie Hydrocharitaceae
+    (Froschbissgew\xE4chse) an. Ihre bis zu 60 cm langen Triebe eignen sich, an der
+    Oberfl\xE4che flutend, hervorragend als Versteckm\xF6glichkeit f\xFCr Jungfische
+    und Garnelen.\L\LEgeria densa ist eine sehr anpassungsf\xE4hige und raschw\xFCchsige
+    Wasserpflanze. Die Dichtbl\xE4ttrige Wasserpest bevorzugt etwas k\xFChlere Becken,
+    vertr\xE4gt aber durchaus auch h\xF6here Temperaturen, wenn ausreichend Licht
+    vorhanden ist. Das tolerierte Temperaturspektrum liegt zwischen 4 und 28\xB0
+    Celsius. Sie wird auch gerne im Gartenteich gehalten.\L\LDie Breitbl\xE4ttrige
+    Wasserpest gedeiht in weichem sowie in hartem Wasser, der pH-Wert sollte zwischen
+    6,5 und 7,5 liegen. Der Lichtbedarf der Pflanze ist nicht besonders hoch, es
+    kann ein halbschattiger Standort gew\xE4hlt werden. Egeria densa ist ein sehr
+    guter Sauerstoffproduzent, an der Wasseroberfl\xE4che flutende Triebe zeigen
+    manchmal Bl\xFCten.\L\LEgeria densa kann durch Kopfstecklinge. bzw. Triebteilung
+    vermehrt werden. Die Pflanze selbst bildet zudem reichlich Seitentriebe aus.\r"
+  disabledFish: []
+  disabledFishInventorySlots: []
+  biologicalName: Egeria densa
+  species: Wasserpest
+  height: bis 60cm
