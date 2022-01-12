@@ -34,7 +34,7 @@ Once the user is happy with the aquarium they can enter the full ARMode. While c
 Hanna Langenberg (me), Niklas K., Marc R.
 
  
-### The project is not entirely completed for submission to our professor yet and will be updated continously until the 14th of January 2022.
+### The project is now submitted to our professor and no further changes (except maybe the ReadMe) will be made until we receive our grade.
 </br>
 
 _Sadly I was not able to publish this repository on github earlier as there were some problems with crashing my LFS. The libraries for the android 64 bit architecture were too large and it took me some time to figure out the correct order in which to add the gitignore._
