@@ -3,14 +3,14 @@ A project from wintersemester 2021 using Unity and C#.
 <br/>_This being said: Please <b>do not clone</b> this repository._
  
 ## The Application
-AquAR is an ar application for android devices to visualize an aquarium in your room. A variety of different aquaria, fish, plants and decor items are available.
+AquAR is an AR application for android devices to visualize an aquarium in your room. A variety of different aquaria, fish, plants and decor items are available.
 <br/><p align="center"><img src="https://github.com/HannaLangenberg/ARAquarium/blob/main/Assets/Screenshots/S_Platziert.jpg" width="550"></p>
  
-<br/>Depending on which aquarium is chosen, some fish will be disabled in the selection menu, as the aquarium would not provide enough space for them. Likewise, some fish diable others when selected. For example, discus and weatherloach should not be placed in the same aquarium, so when chosing one, the other will always be disabled.
+<br/>Depending on which aquarium is chosen, some fish will be disabled in the selection menu, as the aquarium would not provide enough space for them. Likewise, some fish disable others when selected. For example, discus and weatherloach should not be placed in the same aquarium, so when chosing one, the other will always be disabled.
 A small notification at the top of the screen informs the user to avoid confusion. The notification will automatically disappear after a few seconds.
 <br/><p align="center"><img src="https://github.com/HannaLangenberg/ARAquarium/blob/main/Assets/Screenshots/S_MeldungNichtVertragen.jpg" width="550"></p>
 
-<br/>When selecting a fish, the application makes sure that schooling fish will always be present in their minimum number, more or not at all. Missing space is the only reason why there might spawn less fish than their usual minimum number. In this case the user will be informed about the missing space.
+<br/>When selecting a fish, the application makes sure that schooling fish will always be present in their minimum number, more or not at all. Missing space is the only reason why there might spawn fewer fish than their usual minimum number. In this case the user will be informed about the missing space.
 <br/><p align="center"><img src="https://github.com/HannaLangenberg/ARAquarium/blob/main/Assets/Screenshots/S_MeldungAnzahl.jpg" width="550"></p>
 
 All placable objects have a collider to ensure that none of the objects spawn inside one another. In the case that an object could not be placed, the user will be informed.
@@ -23,7 +23,7 @@ If the user would like to learn more about an object, the detailwindow provides 
   <img src="https://github.com/HannaLangenberg/ARAquarium/blob/main/Assets/Screenshots/S_Dekodetails.jpg" width="300" />
 </p>
 
-To program takes a few measures to make the aquarium appear a bit more natural:
+The program takes a few measures to make the aquarium appear a bit more natural:
 <br/>A random rotation along the y-axis is applied to every object and additionally the plants and decor items are scaled randomly. The scale factor is individually set for each aquarium to ensure that no objects can outgrow their home.
 <br/><p align="center"><img src="https://github.com/HannaLangenberg/ARAquarium/blob/main/Assets/Screenshots/S_Rotation.jpg" width="550"></p>
 
