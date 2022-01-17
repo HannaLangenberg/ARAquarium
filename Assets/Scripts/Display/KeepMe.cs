@@ -3,8 +3,8 @@ using UnityEngine;
 namespace Display
 {
     /// <summary>
-    /// This class <c>KeepMe</c> sets the ARSessionOrigin to DontDestroyOnLoad so it with the customized aquarium
-    /// can be transferred to the next scene (full ARMode).
+    /// This class <c>KeepMe</c> sets the ARSessionOrigin to DontDestroyOnLoad so it, together with the
+    /// customized aquarium can be transferred to the next scene (full ARMode).
     /// </summary>
     public class KeepMe : MonoBehaviour
     {
@@ -12,8 +12,11 @@ namespace Display
         /// Static GameObject <c>_aquariumInstance</c> stores the aquarium instance itself when switching the scene.
         /// </summary>
         private static GameObject _aquariumInstance;
+        
         /// <summary>
         /// Sets the GameObject to which it is attached to DontDestroyOnLoad and sets the aquarium instance.
+        /// A check if an instance is already present is not necessary as the user at the current time cannot
+        /// switch the scenes again.
         /// </summary>
         private void Start()
         {

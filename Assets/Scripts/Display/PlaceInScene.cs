@@ -15,6 +15,7 @@ namespace Display
     /// </summary>
     public class PlaceInScene : MonoBehaviour
     {
+        //_____PUBLIC___________________________________________________________________________________________________
         /// <summary>
         /// GameObject <c>Player</c> for easier access to the scripts attached to player.
         /// </summary>
@@ -28,20 +29,28 @@ namespace Display
         /// Image <c>error</c>. The image which displays the error message "... could not be added".
         /// </summary>
         public Image error;
+        /// <summary>
+        /// Image <c>diskusWetterschmerle</c> displays a popup information that discus and weatherloach
+        /// should not be placed in the same aquarium. 
+        /// </summary>
         public Image diskusWetterschmerle;
         /// <summary>
         /// List <c>errorMessages</c>. A list that holds all errorMessages that could occur during placement.
         /// </summary>
         public List<Sprite> errorMessages;
+        /// <summary>
+        /// List <c>informationMessages</c>. A list that holds all informationMessages that could occur during placement.
+        /// </summary>
         public List<Sprite> informationMessages;
-
         /// <summary>
         /// TankObject <c>activeTankObject</c>. A ScriptableObject TankObject which stores information about the selected aquarium. 
         /// </summary>
         public TankObject activeTankObject;
-
+        /// <summary>
+        /// InventorySlot <c>activeTankInventorySlot</c>. The currently selected InventorySlot for the aquarium. 
+        /// </summary>
         public InventorySlot activeTankInventorySlot;
-        
+        //_____PRIVATE__________________________________________________________________________________________________
         /// <summary>
         /// GameObject <c>_...Instance</c>. Temporarily stores the current instance for further manipulation.
         /// </summary>
@@ -96,7 +105,8 @@ namespace Display
         /// Initializes the selected aquarium. Only one aquarium at a time can have an amount of 1,
         /// all the others have an amount of 0. This is used to retrieve the correct selected aquarium.
         /// It is instantiated with respect to the UI elements in the center of the visible area.
-        /// Afterwards the corresponding TankObject is saved as the activeTankObject so that its stats are available.
+        /// Afterwards the corresponding TankObject and inventorySlot are saved as the activeTankObject
+        /// and activeTankInventorySlot so that its stats are available.
         /// </summary>
         private void InitializeSelectedTank()
         {
@@ -146,8 +156,7 @@ namespace Display
         }
         
         /// <summary>
-        /// This function initializes all plants.
-        /// A plant is only initialized if its amount is greater than zero.
+        /// This function initializes all plants with an amount greater than zero.
         /// The counter "fails" works just like the one for fish.
         /// </summary>
         private void InitializeAllPlants()
@@ -168,8 +177,7 @@ namespace Display
             }
         }
         /// <summary>
-        /// This function initializes all decor items.
-        /// A decor item is only initialized if its amount is greater than zero.
+        /// This function initializes all decor items with an amount greater than zero.
         /// The counter "fails" works just like the one for fish.
         /// </summary>
         private void InitializeAllDecor()
@@ -202,7 +210,7 @@ namespace Display
         /// E.g. a discus should be placed in a group of at least 8 fish. But as it is quite large there might not be
         /// enough room for all 8 to spawn. So there is a counter which tracks how often the placing operation succedeed
         /// and sets the displays number accordingly.
-        /// If the amount != 0 one fish is placed as usual.
+        /// If the amount != 0, one fish is placed as usual.
         /// For plants or decor items PositionOther is called.
         /// </summary>
         /// <param name="inventorySlot">InventorySlot upon which add was called. Possible: fish, plant or decor.</param>
@@ -310,11 +318,11 @@ namespace Display
         /// This function is called whenever the user clicks minus on a fish, plant or decor item in the UI.
         /// For fish, plant and decor item the operation is basically the same but other lists have to be used and the
         /// AddOrRemoveAmount function has to be executed on different inventories.
-        /// Having found the correct one it is removed from the list and the instance is destoryed.
+        /// Having found the correct one it is removed from the list and the instance is destroyed.
         /// For the fish, if we reach the minimum value or less all remaining instances are removed from the
         /// _fishInScene list, destroyed and the removed amount is subtracted.
         /// For the normal remove operation, the list which stores all the instances is reversed. This way we can remove
-        /// the items backwards of how we placed them and not it the same order. So the last item we placed will be
+        /// the items backwards of how we placed them and not it the same order. So, the last item we placed will be
         /// removed first. We iterate through the list until we find an instance with a tag that equals the tag we are
         /// searching. Lastly we reverse the list again so that we won't run into problems when adding new items.
         /// For plants and decor items the same is done.
@@ -391,8 +399,7 @@ namespace Display
         /// <summary>
         /// Called whenever the user chooses a different aquarium.
         /// The old one is destroyed, destroying all its children with it.
-        /// Afterwards the activeTankObject is reset, all the dictionary and lists cleared
-        /// and all items newly initialized. 
+        /// Afterwards everything is reset or cleared and then newly initialized. 
         /// </summary>
         public void SwitchTank()
         {
