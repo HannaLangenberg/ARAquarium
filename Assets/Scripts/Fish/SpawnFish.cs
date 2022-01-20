@@ -5,6 +5,9 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
 
+/// <summary>
+/// Unused class. Ignore for now.
+/// </summary>
 public class SpawnFish : MonoBehaviour
 {
 

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Unused class. Ignore for now. Originally to track AR stats during early development.
+/// </summary>
 public class StatsTracker : MonoBehaviour
 {
     public GameObject interaction;

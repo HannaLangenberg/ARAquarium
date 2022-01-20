@@ -1,10 +1,7 @@
-using System.Collections.Generic;
-using System.Linq;
-using RuntimeInspectorNamespace;
 using UnityEngine;
-using UnityEngine.XR.ARFoundation;
-using UnityEngine.XR.ARSubsystems;
-
+/// <summary>
+/// Unused class. Ignore for now. Originally to test mesh and boundingbox positions and size.
+/// </summary>
 public class PlaceThreeTanksAtStart : MonoBehaviour
 {
     // public Tank tankToPlace;

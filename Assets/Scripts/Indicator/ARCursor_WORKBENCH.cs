@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+/// <summary>
+/// Unused class. Ignore for now. Originally to test ARCore during early development.
+/// </summary>
 public class ARCursor_WORKBENCH : MonoBehaviour
 {
     public GameObject placementIndicator;

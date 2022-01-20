@@ -1,6 +1,9 @@
 using System;
 using UnityEngine;
 
+/// <summary>
+/// Unused class. Ignore for now. Originally to test AR raycast selection during early development.
+/// </summary>
 public class SelectTank : MonoBehaviour
 {
     [HideInInspector]
