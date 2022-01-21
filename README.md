@@ -4,7 +4,7 @@ A project from wintersemester 2021 using Unity and C#.
  
 ## The Application
 AquAR is an AR application for android devices to visualize an aquarium in your room. A variety of different aquaria, fish, plants and decor items are available.
-<br/><p align="center"><img src="https://github.com/HannaLangenberg/ARAquarium/blob/main/Assets/Screenshots/S_Platziert.jpg" width="550"></p>
+<br/><p align="center"><img src="https://github.com/HannaLangenberg/ARAquarium/blob/main/Assets/Screenshots/SplashScreen.jpg" width="550"></p>
  
 <br/>Depending on which aquarium is chosen, some fish will be disabled in the selection menu, as the aquarium would not provide enough space for them. Likewise, some fish disable others when selected. For example, discus and weatherloach should not be placed in the same aquarium, so when chosing one, the other will always be disabled.
 A small notification at the top of the screen informs the user to avoid confusion. The notification will automatically disappear after a few seconds.
@@ -28,7 +28,10 @@ The program takes a few measures to make the aquarium appear a bit more natural:
 <br/><p align="center"><img src="https://github.com/HannaLangenberg/ARAquarium/blob/main/Assets/Screenshots/S_Rotation.jpg" width="550"></p>
 
 Once the user is happy with the aquarium they can enter the full ARMode. While choosing an area to place the object at, the aquarium follows an indicator. This indicator hints detected planes where the aquarium could be placed. This detection is done by ARCore. After placing the aquarium, the user can walk around and inspect it.
-<br/><p align="center"><img src="https://github.com/HannaLangenberg/ARAquarium/blob/main/Assets/Screenshots/S_Cursor.jpg" width="550"></p>
+<p float="left">
+  <img src="https://github.com/HannaLangenberg/ARAquarium/blob/main/Assets/Screenshots/S_Cursor.jpg" width="450" />
+  <img src="https://github.com/HannaLangenberg/ARAquarium/blob/main/Assets/Screenshots/S_Platziert.jpg" width="450" />
+</p>
 
 ### The team:
 Hanna Langenberg (me), Niklas K., Marc R.
