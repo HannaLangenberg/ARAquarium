@@ -5,6 +5,10 @@ using UnityEngine;
 
 namespace UI
 {
+    /// <summary>
+    /// Currently unused.
+    /// TODO Should later be implemented for a cleaner code style. (Time missing)
+    /// </summary>
     public class HandleStats : MonoBehaviour
     {
    

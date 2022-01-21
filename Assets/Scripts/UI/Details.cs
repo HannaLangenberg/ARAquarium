@@ -4,6 +4,9 @@ using Scriptable_Objects.Items.Scripts;
 
 namespace UI
 {
+    /// <summary>
+    /// Class <c>Details</c> stores an ItemObject, which is a ScriptableObject, and serializable UI elements.
+    /// </summary>
     public class Details : MonoBehaviour
     {
         public ItemObject itemObject;
